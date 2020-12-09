@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Your name here">
+  <meta name="author" content="Gerard Anderson">
   <meta name="description" content="My first webpage">
   <!-- meta http-equiv="X-Frame-Options" content="deny" -->
 
@@ -21,17 +21,16 @@
   <!-- Javascript, you can have more than one. -->
   <script src='wireframe.js'></script>
 
-  <header>
-  <div id='header'>
-    <!-- Image sourced from www.rmit.edu.au for educational purposes only -->
-    <div><img src='../media/RMIT-Logo.png' alt='RMIT University logo' height=80 />Gerard Anderson</div>
-  </div>
-  </header>
 </head>
 
 <body>
 
-  <div id='nav'>
+  <header>
+      <!-- Image sourced from www.rmit.edu.au for educational purposes only -->
+      <div><img src='../media/RMIT-Logo.png' alt='RMIT University logo' height=80 />Gerard Anderson</div>
+  </header>
+  
+  <nav>
     Assignments:
     <!-- link locations: relative to current directory -->
     <ul>
@@ -44,7 +43,7 @@
     <a href="/~e54061/secure" target="_blank">Secure Resources Area</a> |
     <!-- link location: external -->
     <a href='https://drive.google.com/open?id=1uSRn6PHDcpsUtmFQ6MPMM-g2go4o22VP' target="_blank">Course Materials</a>
-  </div>
+  </nav>
 
 <main>
     <article id='about-me'>
@@ -54,26 +53,26 @@
       </p>
       <section id="more-about-me">
         
-        <h3>Who is your tutor / instructor</h3>
+        <h3>Who is your tutor / instructor?</h3>
+        <div>Trevor</div>
+
+        <h3>Who is your labber / workshopper?</h3>
         <div>Jeffry</div>
 
-        <h3>Who is your labber / workshopper</h3>
-        <div>N/A</div>
-
         <h3>Have you any programming or web design experience?</h3>
-        <div>Only from the subjects previously studied. Intro to Programming, Programming 1, Further Programming through RMIT, and Internet Design through Curtin.</div>
+        <div>I've previous studied Intro to Programming, Programming 1 and Further Programming through RMIT. This has given me a great Java foundation. I've also studied Internet Design through Curtin University which has provided a basic knowledge of HTML and CSS as well as techniques and tools for web design.</div>
 
         <h3>Do you see yourself as a programmer, designer, or both?</h3>
-        <div>More as a programmer but the design side is interesting. It's amazing the impressive results that can be achieved.</div>
+        <div>More so a programmer but the design side has started to interest me a lot more recently. I've discovered that impressive web design results can be achieved with little knowledge. It's going to be amazing to see what can be achieved once I've completed my studies.</div>
 
         <h3>What has brought you to this course at RMIT?</h3>
-        <div>Apart from it being mandatory? Haha! Looking forward to learning more about the technologies that really make webpages shine.</div>
+        <div>Apart from it being mandatory? Haha! I'm looking forward to learning more about the technologies that make today's web pages really shine. Those who work in technology need to be able to market themselves and what better way than building a website to both be and showcase one's CV.</div>
 
         <h3>What are you hoping to get out of the course?</h3>
-        <div>A more complete understanding of what webpages are made up of.</div>
+        <div>A more complete understanding of the languages and technologies that make up the web.</div>
 
         <h3>What websites do you use the most?</h3>
-        <div>_ &larr; <i>anandtech.com!</i></div>
+        <div><i>anandtech.com</i></div>
 
         <h3>Do you have any interests or hobbies?</h3>
         <div>I make a mean loaf of bread. And I enjoy eating it too!</div>
@@ -82,18 +81,17 @@
     </article>
     
     <aside>
-      <div align='center'>Deprecated code sample.</div>
+      
     </aside>
     
 </main>
 
+<footer>
+    &copy; Gerard Anderson
+    <script>document.write(new Date().getFullYear());</script><noscript>1989</noscript>.
+    https://github.com/s3318814/wp.git <button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button>
+</footer>
+
 </body>
 
-<footer>
-  <div id=footer>
-    &copy; Insert your name here
-    <script>document.write(new Date().getFullYear());</script><noscript>1989</noscript>.
-    Put your git repo link here (important!) and other links if you wish. <button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button>
-  </div>
-</footer>
 </html>
