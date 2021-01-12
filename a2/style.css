@@ -1,1 +1,38 @@
 /* Insert your styles here */
+
+@import url('//fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+nav a{
+	display: inline-block;
+	font-family: 'Yellowtail';
+	padding: 10px 40px;
+}
+
+nav a:link, nav a:visited{
+	color: yellow;
+	text-decoration: none;
+}
+
+nav a:hover, nav a:active{
+	color: black;
+	background-color: yellow;
+}
+
+header{
+	}
+	
+nav{
+	position: sticky;
+	top: 0px;
+}
+		
+main{
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+footer {
+	position: fixed;
+	bottom: 0px;
+}
+	

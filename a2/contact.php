@@ -27,7 +27,7 @@
 		<br>
 		<input type="checkbox" id="remember-me" name="remember-me"><label for="remember-me">Remember Me</label>
 		</fieldset>
-		<input type="submit">
+		<input type="submit" name="send" value="Send">
 	</form>
 </body>
 </html>

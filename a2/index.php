@@ -18,12 +18,14 @@
     </header>
 
     <nav>
-      <div><a href="./letters.html">Letters &amp; Post Cards</a></div>
+      <div><a href="./letters.php">Letters &amp; Post Cards</a></div>
+      <div><a href="./contact.php">Contact </a></div>
     </nav>
 
     <main>
       <article id='Website Under Construction'>
     <!-- Creative Commons image sourced from https://pixabay.com/en/maintenance-under-construction-2422173/ and used for educational purposes only -->
+        <p>Test</p>
         <img src='../../media/website-under-construction.png' alt='Website Under Construction' />
       </article>
     </main>
