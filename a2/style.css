@@ -24,7 +24,13 @@ nav{
 	display: block;
 	position: sticky;
 	top: 0px;
-	background: grey;
+	background: #343434;
+	min-width: 600px; /* correct size? */
+}
+
+#sub-nav{
+	top: 40px;
+	background: blue;
 }
 
 nav li{
@@ -68,11 +74,22 @@ img{
 	width: 30%;	
 }
 
+p{
+	margin-bottom: 30px;
+}
+
+p:last-child{
+	margin-bottom: 70px; /* what to do about this?*/
+}
+
 footer {
 	position: fixed;
 	bottom: 0px;
-	background: grey; /* Fix this */
 	width: 100%;
 	padding: 0;
+	background: #343434;
+	color: white;
+	font-size: 0.8em;
+	text-align: center;
 }
 	
