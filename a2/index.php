@@ -14,7 +14,8 @@
   <body>
 
     <header>
-      <div><h1>ANZAC Douglas Raymond Baker - Letters Home</h1></div>
+      <h1>ANZAC Douglas Raymond Baker</h1>
+      <h1>Letters Home</h1>
     </header>
 
     <nav>
