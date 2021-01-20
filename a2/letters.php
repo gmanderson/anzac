@@ -4,11 +4,21 @@
 <head>
 <!-- put head shit here -->	
 <title>Letters and Post Cards</title>
+
+<link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>">
+<script src='../wireframe.js'></script>
 </head>	
 	
 	<body>
-		
 		<nav>
+			  <ul>
+				<li><a href="./index.php">Home</a></li>
+				<li><a href="./letters.php">Letters &amp; Post Cards</a></li>
+				<li><a href="./contact.php">Contact </a></li>
+			  </ul>
+		</nav>
+			
+		<nav id="sub-nav">
 			<ul>
 				<li><a href="#1914">1914</a></li>
 				<li><a href="#1915">1915</a></li>
