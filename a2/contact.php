@@ -4,8 +4,23 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Contact</title>
+	
+	<!-- Keep wireframe.css for debugging, add your css to style.css -->
+		<link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
+		<link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>">
+		<script src='../wireframe.js'></script>
 </head>
 <body>
+	
+	<nav>
+		  <ul>
+			<li><a href="./index.php">Home</a></li>
+			<li><a href="./letters.php">Letters &amp; Post Cards</a></li>
+			<li><a href="">Related Links</a></li>
+			<li><a href="./contact.php" class="current-page">Contact </a></li>
+		  </ul>
+	</nav>
+	
 	<form action="https://titan.csit.rmit.edu.au/~e54061/wp/testcontact.php" method="post">
 		<fieldset>
 			<legend>Contact Us</legend>
