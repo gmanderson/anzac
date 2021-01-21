@@ -1,8 +1,10 @@
 /* Insert your styles here */
 
-@import url('//fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 
-@import url('//fonts.googleapis.com/css2?family=Fraunces:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 
@@ -11,21 +13,50 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;	
-	font-family: 'Fraunces', serif;
+	font-family: 'Playfair Display', serif;
 }
+
+body{
+	background: #aebebe;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Michroma', sans-serif;
+}
+
+/* h1{
+	animation-name: example;
+	animation-duration: 5s;	
+}
+
+@keyframes example{
+	from {opacity: 0;}
+	to {opacity: 1;}
+} */
 
 header{
 	text-align: center;	
 	margin: 20px;
-	background: #f2d25c;
 }
 
 h1{
 	font-size: 3em;
 }
 
+header h1+h1{
+	font-size: 2em;
+}
+
 h2{
 	font-size: 2em;
+}
+
+h3, h4{
+	font-size: 1.5em;
+}
+
+h2+h2{
+	font-size: 1.1em;
 }
 
 header img{
@@ -79,7 +110,9 @@ ul{
 
 .current-page{
 	background-color: #bebebe;
-	color: #000000;
+	color: #000000 !important;
+	border-top: 1px solid #343434;
+	border-bottom: 1px solid #343434;
 }
 
 main{
@@ -87,12 +120,12 @@ main{
 	margin-bottom: 150px;
 	margin-left: 40px;
 	margin-right: 40px;
-
 }
 
 .background-image{
 	background-image: url("../../media/road-making-party.jpg");
 	height: 643px;
+	width: 100%;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed;
@@ -116,12 +149,29 @@ dd{
 }
 
 .post-card p{
-	font-family: 'Homemade Apple', cursive;
 	column-count: 2;
+}
+
+.post-card p, .letter p{
+	font-family: 'Homemade Apple', cursive;
 	border: 1px black solid;
 	width:800px;
 	margin: auto;
 	padding: 10px;
+	/* background: #ffd; */
+	background-image: url("../../media/grunge-vintage-old-paper-background.jpg");
+	/* <a href='https://www.freepik.com/photos/background'>Background photo created by aopsan - www.freepik.com</a>
+	https://www.freepik.com/free-photo/grunge-vintage-old-paper-background_1273370.htm#page=1&query=old%20paper&position=0 */
+}
+
+form label{
+	display: inline-block;
+	width: 110px;
+	align-content: first;
+}
+
+form input{
+	width: 200px;
 }
 
 footer {
@@ -134,5 +184,9 @@ footer {
 	font-size: 0.8em;
 	text-align: center;
 	padding: 10px;
+}
+
+footer a{
+	color: #ffffff;
 }
 	
