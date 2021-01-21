@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
     <title>Assignment 2</title>
     
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
@@ -16,7 +18,7 @@
 
     <header>
       <h1>ANZAC Douglas Raymond Baker</h1>
-      <h2>Letters Home</h2>
+      <h1>Letters Home</h1>
       <!-- Original image below sourced for educational purposes: https://www.sites.google.com/site/anzacdouglasraymondbaker/home. Photograph courtesy of : John Oxley Library, State Library of Queensland [Image number: 702692-19141024-s0023-0027]-->
         <img src="../../media/drbaker.jpg" alt="">
     </header>
@@ -35,7 +37,7 @@
       <article id='home'>
 
           
-          <p>2015 marks the centenary of the birth of the ANZAC legend. As such, many people, particularly young people, are looking for ways to connect with people of that period and in particular, those who created the ANZAC legend.</p>
+          <p>2015 marked the centenary of the birth of the ANZAC legend. As such, many people, particularly young people, are looking for ways to connect with people of that period and in particular, those who created the ANZAC legend.</p>
           
           
           This site presents the letters of Douglas Raymond Baker, who came from Gympie, Queensland, Australia. He enlisted in August 1914 and during the years that followed, he wrote letters and post cards to his family at home. In them, he describes much of the goings-on of the life of an ANZAC, his feeling and opinions, and experiences while visiting his relatives in England during leave.
@@ -50,7 +52,7 @@
       
       <article id='introduction'>
         <h2>Introduction</h2>
-          <p>By Douglas Richard Baker (son of Douglas Raymond Baker)</p>
+          <h2>By Douglas Richard Baker (son of Douglas Raymond Baker)</h2>
           
           <p>These are copies of letters written by my father Douglas Raymond Baker during the First World War (1914-1918) to his family in Gympie. I have three thick exercise books in which the letters were copied in hand writing by my Aunt Alice, his sister. I understand that this was done so his letters could be sent on to other members of the family. I don’t know if the originals are still in existence, probably not.</p>
           
@@ -101,7 +103,7 @@
             <dt>Bonsorful</dt>
             <dd>Wonderful, marvellous, awesome, cool</dd>
             <dt>M. G. S.</dt>
-            <dd>Machine  Gun  Section</dd>
+            <dd>Machine Gun Section</dd>
             <dt>Territorials</dt>
             <dd>Soldiers of the English Volunteer Reserve</dd>
             <dt>Terriers</dt>
@@ -119,8 +121,8 @@
       </article>
       
       <article>
-        <p>Additional Comments by Ian Stuart Baker
-          (son of Douglas Richard Baker)</p>
+        <h2>Additional Comments by Ian Stuart Baker</h2>
+        <h2> (son of Douglas Richard Baker)</h2>
           
           <p>As the grandson of the Douglas Raymond, I'd like to share some thoughts with modern readers. Apart from the language issues that my Dad highlights, it would also help to recognise that in Grandfathers day, the letter was the only means of international communications for average people (telegrams were expensive and used rarely and international telephone calls, rarer still). That's why these letters are so important and why their content gives us window into their lives.</p>
           
@@ -133,7 +135,7 @@
     <footer>
       <div>&copy;<script>
         document.write(new Date().getFullYear());
-      </script> Gerard Anderson s3318814. Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
+      </script> Gerard Anderson s3318814. Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>. <a href="https://github.com/s3318814/wp">GitHub Repository</a></div>
       <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
       <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
     </footer>
