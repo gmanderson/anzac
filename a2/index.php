@@ -15,7 +15,7 @@
 
     <header>
       <h1>ANZAC Douglas Raymond Baker</h1>
-      <h1>Letters Home</h1>
+      <h2>Letters Home</h2>
     </header>
 
     <nav>
@@ -29,9 +29,8 @@
     <main>
       <article id='home'>
         <img src="../../media/drbaker.jpg" alt="">
-        <p>Hello and welcome,</p>
           
-          <p>This year is the centenary of the birth of the ANZAC legend. As such, many people, particularly young people, are looking for ways to connect with people of that period and in particular, those who created the ANZAC legend.</p>
+          <p>2015 marks the centenary of the birth of the ANZAC legend. As such, many people, particularly young people, are looking for ways to connect with people of that period and in particular, those who created the ANZAC legend.</p>
           
           
           This site presents the letters of Douglas Raymond Baker, who came from Gympie, Queensland, Australia. He enlisted in August 1914 and during the years that followed, he wrote letters and post cards to his family at home. In them, he describes much of the goings-on of the life of an ANZAC, his feeling and opinions, and experiences while visiting his relatives in England during leave.
@@ -39,8 +38,7 @@
           They start from the beginning of basic training in Brisbane in August 1914 and end in May 1918. 
           
           They are offered here so that others may get an understanding of life as an ANZAC and get a sense of what life on the battlefield was like.
-          
-          From the menu on the left, read the Introduction to set the scene. Then, to start reading the letters, click on Letter and Post Cards in the menu on the left. All the letters are searchable using the  search bar at the top right of this page.</p>
+          </p>
       </article>
       
       <article id='introduction'>
@@ -60,56 +58,57 @@
           <p>The amounts of money are, of course, in Pounds, shillings and pence but as these are out of date and we have no pounds sign in the computer I have written them in, sometimes showing the decimal equivalents. One Pound equalled $2,  one shilling equalled 10 cents and one penny equalled a little under one cent. After a while I stopped putting the equivalents in as they had cno significance unless you knew the relative cost of things then and now. A shilling – equivalent to ten cents might actually alent to ten cents might actually buy  buy ten or twenty dollars worth of goods now.</p>
           
           <!-- Convert to a DL -->
-          <p>Some abbreviations and terms:-
-          
-             Coy      =  Company(part of a Battalion)
-          
-                                              Batt.    =   Battalion.
-          
-                                              Col.     =   Colonel.
-          
-                                                 Sergt.  =   Sergeant.         
-          
-                                                 Capt.   =    Captain
-          
-                                                 Lieut.   =    Lieutenant (pronounced “Lef-tenant”)
-          
-                                                 Q.M.    =     Quarter Master.
-          
-                                                 Comp. =    also  Company.
-          
-                                                 PC       =    Post Card.(not Personal Computer!)
-          
-                                                 CB       =    Confined to Barracks (leave stopped as a punishment)
-          
-                                                 big hits =    top ranked officers.
-          
-                                                 brass hats  =  top ranked officers.
-          
-                                                 dry canteen  =  bar and/or cafeteria, etc. where  no alcohol is served.
-          
-                                                 wet canteen  = bar and/or cafeteria, etc. where alcohol  is available.
-          
-                                                             sapping  =  digging a tunnel or deep trench to approach or undermine an enemy position.
-                                                 L. Horse  =  Light Horse. 
-          
-                 good nick or great nick  =  good health
-          
-             bonsorful  =  wonderful, marvellous.     (in 2009speak,  “awesome”, “cool”.)
-          
-             M. G. S.   =  Machine  Gun  Section.
-          
-             Territorials  =  soldiers of the English  Volunteer Reserve.
-          
-             Terriers   =   Territorials
-          
-             Bomb  =  unless dropped from an aeroplane these would have been Mills Bombs    –     an early version of the hand grenade.
-          
-             Blighty =   England.
-          
-             Duke    =   Dad’s/family’s dog.
-          
-             O.R.     =   Orderly Room.</p>
+            
+          <dl>
+            <dh>Some abbreviations and terms:-</dh>
+            <dt>Comp./Coy</dt>
+            <dd>Company(part of a Battalion)</dd>
+            <dt>Batt.</dt>
+            <dd>Battalion</dd>
+            <dt>Col.</dt>
+            <dd>Colonel</dd>
+            <dt>Sergt.</dt>
+            <dd>Sergeant</dd>
+            <dt>Capt.</dt>
+            <dd>Captain</dd>
+            <dt>Lieut.</dt>
+            <dd>Lieutenant (pronounced “Lef-tenant”)</dd>
+            <dt>Q.M.</dt>
+            <dd>Quarter Master</dd>
+            <dt>PC</dt>
+            <dd>Post Card</dd>
+            <dt>CB</dt>
+            <dd>Confined to Barracks (leave stopped as a punishment)</dd>
+            <dt>Big hits/Brass hats</dt>
+            <dd>Top ranked officers</dd>
+            <dt>Dry canteen</dt>
+            <dd>Bar and/or cafeteria, etc. where  no alcohol is served</dd>
+            <dt>Wet canteen</dt>
+            <dd>Bar and/or cafeteria, etc. where alcohol  is available</dd>
+            <dt>Sapping</dt>
+            <dd>Sigging a tunnel or deep trench to approach or undermine an enemy position</dd>
+            <dt>L. Horse</dt>
+            <dd>Light Horse</dd>
+            <dt>Good nick/great nick</dt>
+            <dd>Good health</dd>
+            <dt>Bonsorful</dt>
+            <dd>Wonderful, marvellous, awesome, cool</dd>
+            <dt>M. G. S.</dt>
+            <dd>Machine  Gun  Section</dd>
+            <dt>Territorials</dt>
+            <dd>Soldiers of the English Volunteer Reserve</dd>
+            <dt>Terriers</dt>
+            <dd>Territorials</dd>
+            <dt>Bomb</dt>
+            <dd>Unless dropped from an aeroplane these would have been Mills Bombs – an early version of the hand grenade</dd>
+            <dt>Blighty</dt>
+            <dd>England</dd>
+            <dt>Duke</dt>
+            <dd>Dad’s/family’s dog</dd>
+            <dt>O.R.</dt>
+            <dd>Orderly Room</dd>
+          </dl>
+          <p>
       </article>
       
       <article>
