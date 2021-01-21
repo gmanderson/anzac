@@ -4,6 +4,9 @@
 
 @import url('//fonts.googleapis.com/css2?family=Fraunces:wght@500&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+
+
 *{
 	box-sizing: border-box;
 	padding: 0;
@@ -14,10 +17,23 @@
 header{
 	text-align: center;	
 	margin: 20px;
+	background: #f2d25c;
 }
 
 h1{
 	font-size: 3em;
+}
+
+h2{
+	font-size: 2em;
+}
+
+header img{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 30%;	
+	max-width: 200px;
 }
 
 nav{
@@ -25,12 +41,13 @@ nav{
 	position: sticky;
 	top: 0px;
 	background: #343434;
-	min-width: 600px; /* correct size? */
+	min-width: 690px; /* correct size? */
 }
 
-#sub-nav{
+/* Selects adjacent sibling (subnav) */
+nav+nav{
 	top: 40px;
-	background: blue;
+	background: #445454;
 }
 
 nav li{
@@ -45,13 +62,13 @@ nav a{
 }
 
 nav a:link, nav a:visited{
-	color: black;
+	color: #ffffff;
 	text-decoration: none;
 }
 
 nav a:hover, nav a:active{
-	color: black;
-	background-color: yellow;
+	color: #000000;
+	background-color: #ffffff;
 }
 
 ul{
@@ -60,19 +77,28 @@ ul{
 	padding: 0;
 }
 
-main{
-	margin-top: auto;
-	margin-bottom: auto;
-	margin-left: 40px;
-	margin-right: 40px;
+.current-page{
+	background-color: #bebebe;
+	color: #000000;
 }
 
-img{
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	width: 30%;	
+main{
+	margin-top: 50px;
+	margin-bottom: 150px;
+	margin-left: 40px;
+	margin-right: 40px;
+
 }
+
+.background-image{
+	background-image: url("../../media/road-making-party.jpg");
+	height: 643px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+
 
 p{
 	margin-bottom: 30px;
@@ -80,6 +106,22 @@ p{
 
 p:last-child{
 	margin-bottom: 70px; /* what to do about this?*/
+}
+
+dt{
+	font-style: italic;
+}
+dd{
+	text-indent: 20px;
+}
+
+.post-card p{
+	font-family: 'Homemade Apple', cursive;
+	column-count: 2;
+	border: 1px black solid;
+	width:800px;
+	margin: auto;
+	padding: 10px;
 }
 
 footer {
@@ -91,5 +133,6 @@ footer {
 	color: white;
 	font-size: 0.8em;
 	text-align: center;
+	padding: 10px;
 }
 	
