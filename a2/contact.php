@@ -37,10 +37,10 @@
 		<input type="text" id="subject" name="subject">
 		<br>
 		<label for="message">Message</label>
-		
 		<textarea name="message" id="message" cols="30" rows="10"></textarea>
 		<br>
-		<input type="checkbox" id="remember-me" name="remember-me"><label for="remember-me">Remember Me</label>
+		<label for="remember-me">Remember Me</label>
+		<input type="checkbox" id="remember-me" name="remember-me">
 		</fieldset>
 		<input type="submit" name="send" value="Send">
 	</form>
