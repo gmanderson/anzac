@@ -15,7 +15,7 @@
 		
 		<header>
 			  <h1>ANZAC Douglas Raymond Baker</h1>
-			  <h2>Letters Home</h2> <!-- Should be h1 -->
+			  <h1>Letters Home</h1>
 			  <!-- Original image below sourced for educational purposes: https://www.sites.google.com/site/anzacdouglasraymondbaker/home. Photograph courtesy of : John Oxley Library, State Library of Queensland [Image number: 702692-19141024-s0023-0027]-->
 				<img src="../../media/drbaker.jpg" alt="">
 			</header>
@@ -40,9 +40,10 @@
 		</nav>
 		
 		<main>
+			<h2>Letters & Postcards</h2>
 		<article id="1914">
-		<h1>1914</h1>
-		<h2>August</h2>
+		<h3>1914</h3>
+		<h4>August</h4>
 		<p>On the first page of the exercise book Aunt Alice has written:- Book No. I written by Alice Baker. Letters received from D. R. Baker after his enlistment for the war  Sept.  1914.</p>
 		<ol>
 			<li class="post-card">Post Card. August 25th 1914.
@@ -62,7 +63,7 @@
 							Yesterday about 150,000 rounds of ball cartridges arrived, we will have to go through a stiff shooting test. Our feet are examined every day. We sit in a long row with bare feet sticking out. I will have to dress for parade now so hooray with best love from Ray.
 				
 																			---oooOooo---</p></li>
-			<li>Post Card, August 31st. 1914.</li>
+			<li class="post-card">Post Card, August 31st. 1914.
 			<p> August 31st. 1914.
 				
 				 
@@ -73,7 +74,7 @@
 				
 				 
 				
-																			---oooOooo---</p>
+																			---oooOooo---</p></li>
 		</ol>
 		
 		<h2>September</h2>
