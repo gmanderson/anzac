@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Assignment 2</title>
     
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
@@ -16,19 +17,23 @@
     <header>
       <h1>ANZAC Douglas Raymond Baker</h1>
       <h2>Letters Home</h2>
+      <!-- Original image below sourced for educational purposes: https://www.sites.google.com/site/anzacdouglasraymondbaker/home. Photograph courtesy of : John Oxley Library, State Library of Queensland [Image number: 702692-19141024-s0023-0027]-->
+        <img src="../../media/drbaker.jpg" alt="">
     </header>
 
     <nav>
       <ul>
-        <li><a href="./index.php">Home</a></li>
+        <li><a href="./index.php" class="current-page">Home</a></li>
         <li><a href="./letters.php">Letters &amp; Post Cards</a></li>
+        <li><a href="">Related Links</a></li>
         <li><a href="./contact.php">Contact </a></li>
+
       </ul>
     </nav>
 
     <main>
       <article id='home'>
-        <img src="../../media/drbaker.jpg" alt="">
+
           
           <p>2015 marks the centenary of the birth of the ANZAC legend. As such, many people, particularly young people, are looking for ways to connect with people of that period and in particular, those who created the ANZAC legend.</p>
           
@@ -39,6 +44,8 @@
           
           They are offered here so that others may get an understanding of life as an ANZAC and get a sense of what life on the battlefield was like.
           </p>
+          
+          <div class="background-image"></div>
       </article>
       
       <article id='introduction'>
@@ -55,7 +62,7 @@
           
           <p>Where he uses the word “gay” it is used in the true sense, bright, happy, carefree, etc., This is the original meaning of the word before it became associated with the homosexual community.</p>
           
-          <p>The amounts of money are, of course, in Pounds, shillings and pence but as these are out of date and we have no pounds sign in the computer I have written them in, sometimes showing the decimal equivalents. One Pound equalled $2,  one shilling equalled 10 cents and one penny equalled a little under one cent. After a while I stopped putting the equivalents in as they had cno significance unless you knew the relative cost of things then and now. A shilling – equivalent to ten cents might actually alent to ten cents might actually buy  buy ten or twenty dollars worth of goods now.</p>
+          <p>The amounts of money are, of course, in Pounds, shillings and pence but as these are out of date and we have no pounds sign in the computer I have written them in, sometimes showing the decimal equivalents. One Pound equalled $2, one shilling equalled 10 cents and one penny equalled a little under one cent. After a while I stopped putting the equivalents in as they had no significance unless you knew the relative cost of things then and now. A shilling – equivalent to ten cents might actually alent to ten cents might actually buy  buy ten or twenty dollars worth of goods now.</p>
           
           <!-- Convert to a DL -->
             
