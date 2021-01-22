@@ -18,18 +18,24 @@
 
 body{
 	background: #aebebe;
+max-width: 1280px;
+margin-left: auto;
+margin-right: auto;
 }
 
 h1, h2, h3, h4, h5, h6{
 	font-family: 'Michroma', sans-serif;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* h1{
 	animation-name: example;
-	animation-duration: 5s;	
+	animation-duration: 2s;	
 }
 
-@keyframes example{
+/* @keyframes example{
 	from {opacity: 0;}
 	to {opacity: 1;}
 } */
@@ -51,8 +57,12 @@ h2{
 	font-size: 2em;
 }
 
-h3, h4{
-	font-size: 1.5em;
+h3{
+	font-size: 1.6em;
+}
+
+h4{
+	font-size: 1.2em;
 }
 
 h2+h2{
@@ -73,11 +83,22 @@ nav{
 	top: 0px;
 	background: #343434;
 	min-width: 690px; /* correct size? */
+	border-left: 1px solid #343434;
 }
+
+/* nav{
+	animation-name: example;
+	animation-duration: 2s;	
+}
+
+@keyframes example{
+	0% {transform: translateX(-1000px);}
+	100% {transform: translateX(0px);}
+} */
 
 /* Selects adjacent sibling (subnav) */
 nav+nav{
-	top: 40px;
+	/* top: 40px; NOt sure whythis suddenly doesn't matter*/
 	background: #445454;
 }
 
@@ -123,45 +144,84 @@ main{
 }
 
 .background-image{
-	background-image: url("../../media/road-making-party.jpg");
-	height: 643px;
-	width: 100%;
+	height: 543px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed;
+	margin:0;
+	background-size: contain;
+
 }
 
+#image-1{
+	background-image: url("../../media/road-making-party.jpg");
+}
 
+#image-2{
+	background-image: url("../../media/dug-outs-at-gaba-tepe.jpg");
+}
+
+#image-3{
+	background-image: url("../../media/anzac-cove.jpg");
+}
 
 p{
 	margin-bottom: 30px;
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 p:last-child{
 	margin-bottom: 70px; /* what to do about this?*/
 }
 
+dl{
+	column-count: 2;	
+}
+
 dt{
 	font-style: italic;
+	font-weight: bold;
 }
 dd{
 	text-indent: 20px;
 }
 
-.post-card p{
-	column-count: 2;
+article li{
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
-.post-card p, .letter p{
+
+.post-card div, .letter div{
 	font-family: 'Homemade Apple', cursive;
 	border: 1px black solid;
-	width:800px;
+	width: 800px;
 	margin: auto;
 	padding: 10px;
 	/* background: #ffd; */
 	background-image: url("../../media/grunge-vintage-old-paper-background.jpg");
 	/* <a href='https://www.freepik.com/photos/background'>Background photo created by aopsan - www.freepik.com</a>
 	https://www.freepik.com/free-photo/grunge-vintage-old-paper-background_1273370.htm#page=1&query=old%20paper&position=0 */
+}
+
+.post-card div h5, .post-card div p, .letter div h5, .letter div p{
+	font-family: 'Homemade Apple', cursive;
+	text-align: right;
+}
+
+.post-card div p+p, .letter div p+p{
+	text-align: left;
+}
+
+.post-card div p+p{
+	column-count: 2;
+}
+
+.post-card div p+p+p, .letter div p+p+p{
+	text-align: center;
+	column-count: 1;
 }
 
 form label{
@@ -177,6 +237,7 @@ form input{
 footer {
 	position: fixed;
 	bottom: 0px;
+	left: 0px;
 	width: 100%;
 	padding: 0;
 	background: #343434;
@@ -184,9 +245,35 @@ footer {
 	font-size: 0.8em;
 	text-align: center;
 	padding: 10px;
+	margin-left: 0;
 }
 
 footer a{
 	color: #ffffff;
 }
 	
+	
+@media screen and (max-width: 600px) {
+	/* Parallax effect doesn't work on iOS */
+	.background-image{
+		background-attachment: local;
+		/* width: 346px; */
+		width: 100%;
+		height: 400px;
+		/* height: 256px; */
+		/* margin-top: 20px;
+		margin-bottom: 20px; */
+	}
+	
+	dl{
+		column-count: 1;
+	}
+	
+	/* footer{
+		font-size:0.6em;
+	} */
+	
+	*{
+		font-size:95%;
+	}
+}
