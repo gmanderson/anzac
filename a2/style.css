@@ -249,7 +249,7 @@ article li{
 
 fieldset{
 	padding: 20px;
-	width: 450px;
+	max-width: 450px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -338,6 +338,16 @@ footer a{
 	
 	dl{
 		column-count: 1;
+	}
+	fieldset{
+		max-width: 250px;
+	}
+	form input{
+		margin-top: 0px;
+	}
+	
+	input[type='checkbox']{
+		margin-left: 0px;
 	}
 	
 	footer div{
