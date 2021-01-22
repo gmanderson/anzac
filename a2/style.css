@@ -194,6 +194,10 @@ dd{
 	text-indent: 20px;
 }
 
+article h3{
+	padding-top: 80px;
+}
+
 article li{
 	margin-top: 30px;
 	margin-bottom: 30px;
