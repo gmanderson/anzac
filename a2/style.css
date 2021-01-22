@@ -231,14 +231,14 @@ article li{
 	https://www.freepik.com/free-photo/grunge-vintage-old-paper-background_1273370.htm#page=1&query=old%20paper&position=0 */
 }
 
-.post-card div p, .letter div p{
+li div p{
 	font-family: 'Homemade Apple', cursive;
 	text-align: right;
 	padding-left: 20px;
 	padding-right: 20px;
 }
 
-.post-card div p+p, .letter div p+p{
+li div p+p{
 	text-align: left;
 }
 
@@ -246,7 +246,7 @@ article li{
 	column-count: 2;
 }
 
-.end-flourish{
+li div p:last-child{
 	column-count: 1 !important;
 	text-align: center !important;
 }
