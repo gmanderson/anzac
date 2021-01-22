@@ -47,23 +47,23 @@
 			<form action="https://titan.csit.rmit.edu.au/~e54061/wp/testcontact.php" method="post">
 				<fieldset>
 					<label for="name">Name</label>
-					<input type="text" id="name" name="name" required>
+					<input type="text" id="name" name="name" placeholder="Ian Baker" required>
 					<br>
 		
 					<label for="email">Email</label>
-					<input type="email" id="email" name="email">
+					<input type="email" id="email" name="email" placeholder="ian@baker.com.au" required>
 					<br>
 		
 					<label for="mobile">Mobile</label>
-					<input type="text" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="0412345678">
+					<input type="text" id="mobile" name="mobile" placeholder="0412345678">
 					<br>
 					
 					<label for="subject">Subject</label>
-					<input type="text" id="subject" name="subject">
+					<input type="text" id="subject" name="subject" placeholder="Subject">
 					<br>
 		
 					<label for="message">Message</label>
-					<textarea name="message" id="message"></textarea>
+					<textarea name="message" id="message" placeholder="Type your message here" required></textarea>
 					<br>
 		
 					<input type="checkbox" id="remember-me" name="remember-me">
