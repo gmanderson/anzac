@@ -157,14 +157,17 @@ main a:hover, main a:active{
 }
 
 #image-1{
+	/* Original image below sourced for educational purposes: https://www.iwm.org.uk/history/15-photos-of-the-anzacs-at-gallipoli. */
 	background-image: url("../../media/road-making-party.jpg");
 }
 
 #image-2{
+	/* Original image below sourced for educational purposes: https://www.iwm.org.uk/history/15-photos-of-the-anzacs-at-gallipoli. */
 	background-image: url("../../media/dug-outs-at-gaba-tepe.jpg");
 }
 
 #image-3{
+	/* Original image below sourced for educational purposes: https://www.iwm.org.uk/history/15-photos-of-the-anzacs-at-gallipoli. */
 	background-image: url("../../media/anzac-cove.jpg");
 }
 
