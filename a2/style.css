@@ -274,6 +274,7 @@ form input{
 	border-radius: 5px;
 	font-size: 105%;
 	margin-top: 10px;
+	padding: 4px;
 }
 
 form textarea{
@@ -283,10 +284,12 @@ form textarea{
 	vertical-align: top;
 	margin-top: 5px;
 	font-size: 105%;
+	padding: 4px;
 }
 
 input[type='submit']{
-	padding: 10px 20px 10px 20px;
+	padding: 10px 10px 10px 10px;
+	width: 120px;
 	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
