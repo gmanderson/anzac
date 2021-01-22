@@ -85,48 +85,70 @@
           <dl>
             <dt>Comp./Coy</dt>
             <dd>Company(part of a Battalion)</dd>
+            
             <dt>Batt.</dt>
             <dd>Battalion</dd>
+            
             <dt>Col.</dt>
             <dd>Colonel</dd>
+            
             <dt>Sergt.</dt>
             <dd>Sergeant</dd>
+            
             <dt>Capt.</dt>
             <dd>Captain</dd>
+            
             <dt>Lieut.</dt>
             <dd>Lieutenant (pronounced “Lef-tenant”)</dd>
+            
             <dt>Q.M.</dt>
             <dd>Quarter Master</dd>
+            
             <dt>PC</dt>
             <dd>Post Card</dd>
+            
             <dt>CB</dt>
             <dd>Confined to Barracks (leave stopped as a punishment)</dd>
+            
             <dt>Big hits/Brass hats</dt>
             <dd>Top ranked officers</dd>
+            
             <dt>Dry canteen</dt>
             <dd>Bar and/or cafeteria, etc. where  no alcohol is served</dd>
+            
             <dt>Wet canteen</dt>
             <dd>Bar and/or cafeteria, etc. where alcohol  is available</dd>
+            
             <dt>Sapping</dt>
             <dd>Sigging a tunnel or deep trench to approach or undermine an enemy position</dd>
+            
             <dt>L. Horse</dt>
             <dd>Light Horse</dd>
+            
             <dt>Good nick/great nick</dt>
             <dd>Good health</dd>
+            
             <dt>Bonsorful</dt>
             <dd>Wonderful, marvellous, awesome, cool</dd>
+            
             <dt>M. G. S.</dt>
             <dd>Machine Gun Section</dd>
+            
             <dt>Territorials</dt>
             <dd>Soldiers of the English Volunteer Reserve</dd>
+            
             <dt>Terriers</dt>
             <dd>Territorials</dd>
+            
             <dt>Bomb</dt>
             <dd>Unless dropped from an aeroplane these would have been Mills Bombs – an early version of the hand grenade</dd>
+            
             <dt>Blighty</dt>
             <dd>England</dd>
+            
             <dt>Duke</dt>
             <dd>Dad’s/family’s dog</dd>
+            
             <dt>O.R.</dt>
             <dd>Orderly Room</dd>
           </dl>
