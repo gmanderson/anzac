@@ -145,9 +145,12 @@ main{
 	margin-right: 40px;
 }
 
+/* Affects Related Links Page */
 main a{
 	display: block;
 	line-height: 2em;
+	padding-top: 12px;
+	padding-bottom: 12px;
 	width: 50%;
 	transition: background-color, color;
 	transition-duration: 0.7s;
@@ -164,6 +167,7 @@ main a:hover, main a:active{
 	text-decoration: none;
 }
 
+/* Parallax scrolling background images */
 .background-image{
 	height: 543px;
 	background-repeat: no-repeat;
