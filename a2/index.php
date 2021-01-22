@@ -11,6 +11,7 @@
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>">
+    
     <script src='../wireframe.js'></script>
   </head>
 
@@ -27,7 +28,7 @@
       <ul>
         <li><a href="./index.php" class="current-page">Home</a></li>
         <li><a href="./letters.php">Letters &amp; Post Cards</a></li>
-        <li><a href="">Related Links</a></li>
+        <li><a href="./links.php">Related Links</a></li>
         <li><a href="./contact.php">Contact </a></li>
 
       </ul>
@@ -39,7 +40,7 @@
           
           <p>2015 marked the centenary of the birth of the ANZAC legend. As such, many people, particularly young people, are looking for ways to connect with people of that period and in particular, those who created the ANZAC legend.</p>
           
-          
+          <p>
           This site presents the letters of Douglas Raymond Baker, who came from Gympie, Queensland, Australia. He enlisted in August 1914 and during the years that followed, he wrote letters and post cards to his family at home. In them, he describes much of the goings-on of the life of an ANZAC, his feeling and opinions, and experiences while visiting his relatives in England during leave.
           
           They start from the beginning of basic training in Brisbane in August 1914 and end in May 1918. 
@@ -47,13 +48,18 @@
           They are offered here so that others may get an understanding of life as an ANZAC and get a sense of what life on the battlefield was like.
           </p>
           
-          <div class="background-image"></div>
+          
       </article>
+      
+      <!-- Background image for parallax effect -->
+      <div class="background-image" id="image-1"></div>
       
       <article id='introduction'>
         <h2>Introduction</h2>
-          <h2>By Douglas Richard Baker (son of Douglas Raymond Baker)</h2>
+          <h2>By Douglas Richard Baker</h2>
+          <h2> (son of Douglas Raymond Baker)</h2>
           
+          <section>
           <p>These are copies of letters written by my father Douglas Raymond Baker during the First World War (1914-1918) to his family in Gympie. I have three thick exercise books in which the letters were copied in hand writing by my Aunt Alice, his sister. I understand that this was done so his letters could be sent on to other members of the family. I don’t know if the originals are still in existence, probably not.</p>
           
           <p>In the early letters Alice has not included the name of the person they were written to but later she writes at the beginning, “Letter to Dot”,  “Letter to Mother”, etc. and later still copies the original, “Dear Al”, “Dear Mag”, etc..  Likewise the endings are often not laid out fully as we would do but Al may have done this or Dad may have been saving space on the page.</p>
@@ -66,10 +72,13 @@
           
           <p>The amounts of money are, of course, in Pounds, shillings and pence but as these are out of date and we have no pounds sign in the computer I have written them in, sometimes showing the decimal equivalents. One Pound equalled $2, one shilling equalled 10 cents and one penny equalled a little under one cent. After a while I stopped putting the equivalents in as they had no significance unless you knew the relative cost of things then and now. A shilling – equivalent to ten cents might actually alent to ten cents might actually buy  buy ten or twenty dollars worth of goods now.</p>
           
-          <!-- Convert to a DL -->
-            
+          </section>
+
+<div class="background-image" id="image-2"></div>
+
+            <section>
+              <h2>Abbreviations and terms</h2>
           <dl>
-            <dh>Some abbreviations and terms:-</dh>
             <dt>Comp./Coy</dt>
             <dd>Company(part of a Battalion)</dd>
             <dt>Batt.</dt>
@@ -117,8 +126,10 @@
             <dt>O.R.</dt>
             <dd>Orderly Room</dd>
           </dl>
-          <p>
+            </section>
       </article>
+      
+      <div class="background-image" id="image-3"></div>
       
       <article>
         <h2>Additional Comments by Ian Stuart Baker</h2>
