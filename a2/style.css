@@ -1,7 +1,5 @@
 /* Insert your styles here */
 
-@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
@@ -43,6 +41,10 @@ h1, h2, h3, h4, h5, h6{
 header{
 	text-align: center;	
 	margin: 20px;
+	/* background: #becebe; */ 
+	margin: 0;
+	padding-bottom: 20px;
+	background-image: radial-gradient(#ffFF97, #becebe);
 }
 
 h1{
@@ -98,7 +100,7 @@ nav{
 
 /* Selects adjacent sibling (subnav) */
 nav+nav{
-	/* top: 40px; NOt sure whythis suddenly doesn't matter*/
+	top: 40px;
 	background: #445454;
 }
 
@@ -141,6 +143,25 @@ main{
 	margin-bottom: 150px;
 	margin-left: 40px;
 	margin-right: 40px;
+}
+
+main a{
+	display: block;
+	line-height: 2em;
+	width: 50%;
+	transition: background-color, color;
+	transition-duration: 0.7s;
+}
+
+main a:link, main a:visited{
+	color: #000000;
+	text-decoration: underline;
+}
+
+main a:hover, main a:active{
+	color: #FFFFFF;
+	background-color: #123456;
+	text-decoration: none;
 }
 
 .background-image{
@@ -209,6 +230,8 @@ article li{
 .post-card div h5, .post-card div p, .letter div h5, .letter div p{
 	font-family: 'Homemade Apple', cursive;
 	text-align: right;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .post-card div p+p, .letter div p+p{
@@ -224,14 +247,47 @@ article li{
 	column-count: 1;
 }
 
+fieldset{
+	padding: 20px;
+	width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+}
 form label{
 	display: inline-block;
-	width: 110px;
-	align-content: first;
+	width: 130px;
+	/* align-content: first; */
+	padding: 5px;
+}
+
+input[type='checkbox']{
+	width: auto;
+	margin-left: 132px;
 }
 
 form input{
-	width: 200px;
+	width: 227px;
+	border-radius: 5px;
+	font-size: 105%;
+	margin-top: 10px;
+}
+
+form textarea{
+	width: 227px;
+	height: 200px;
+	border-radius: 5px;
+	vertical-align: top;
+	margin-top: 5px;
+	font-size: 105%;
+}
+
+input[type='submit']{
+	padding: 10px 20px 10px 20px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	box-shadow: 1px 1px #000000;
 }
 
 footer {
@@ -246,6 +302,10 @@ footer {
 	text-align: center;
 	padding: 10px;
 	margin-left: 0;
+}
+
+footer div{
+	line-height: 2.4em;
 }
 
 footer a{
@@ -265,13 +325,16 @@ footer a{
 		margin-bottom: 20px; */
 	}
 	
+	nav a{
+		padding: 10px 20px 10px 20px;
+	}
 	dl{
 		column-count: 1;
 	}
 	
-	/* footer{
-		font-size:0.6em;
-	} */
+	footer div{
+		line-height: 1.9em;
+	}
 	
 	*{
 		font-size:95%;
