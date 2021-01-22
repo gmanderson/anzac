@@ -328,6 +328,11 @@ footer a{
 	nav a{
 		padding: 10px 20px 10px 20px;
 	}
+	
+	nav+nav{
+		top: 38px;
+	}
+	
 	dl{
 		column-count: 1;
 	}
