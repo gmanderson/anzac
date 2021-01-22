@@ -46,7 +46,6 @@
 	
 			<form action="https://titan.csit.rmit.edu.au/~e54061/wp/testcontact.php" method="post">
 				<fieldset>
-					<legend>Contact Us</legend>
 					<label for="name">Name</label>
 					<input type="text" id="name" name="name" required>
 					<br>
@@ -67,8 +66,9 @@
 					<textarea name="message" id="message"></textarea>
 					<br>
 		
-					<label for="remember-me">Remember Me</label>
 					<input type="checkbox" id="remember-me" name="remember-me">
+					<label for="remember-me">Remember Me</label>
+					
 				</fieldset>
 				<input type="submit" name="send" value="Send">
 			</form>
