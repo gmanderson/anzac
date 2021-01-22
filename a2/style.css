@@ -130,9 +130,8 @@ main a{
 	line-height: 2em;
 	padding-top: 12px;
 	padding-bottom: 12px;
-	width: 50%;
 	transition: background-color, color;
-	transition-duration: 0.7s;
+	transition-duration: 1s;
 }
 
 main a:link, main a:visited{
@@ -324,9 +323,11 @@ footer a{
 	dl{
 		column-count: 1;
 	}
+
 	fieldset{
 		max-width: 250px;
 	}
+	
 	form input{
 		margin-top: 0px;
 	}
