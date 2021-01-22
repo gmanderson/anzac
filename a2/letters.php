@@ -77,7 +77,7 @@
 								
 								<p>Just have a chance to write a few lines at a small shop near the Camp. We had about four hours in Brisbane before going to Camp and had a good look round. Arrived in Camp about 6 p.m. and all the Gympie lads [Infantry] were placed in one tent [11 of us].  The Light Horse are nearly a mile from us. Of course it was my luck to be made Tent Orderly for the first day – getting the tucker and cleaning up. We have had nothing issued to us yet, so just as well I brought something.  There is no child’s play in this camp – plenty of hard work – they mean business. We have a free hand at night so far and can write as we like.  Saw Herb as we were marching to the Camp. He was going back from work and I had only time to shake hands with him – could not leave the ranks. We will be under Captain Jackson. He has been appointed Captain of the Northern Rivers men and managed to get us in with him. Cannot write any more, am in a hurry. Will write more later on. Am feeling quite homesick. Had our feet examined today, teeth tomorrow I think.</p>
 								
-								<p>---oooOooo---</p>
+								<p class="end-flourish">---oooOooo---</p>
 							</div>
 						</li>
 				
@@ -89,7 +89,7 @@
 								
 								<p>Yesterday about 150,000 rounds of ball cartridges arrived, we will have to go through a stiff shooting test. Our feet are examined every day. We sit in a long row with bare feet sticking out. I will have to dress for parade now so hooray with best love from Ray.</p>
 								
-								<p>---oooOooo---</p>
+								<p class="end-flourish">---oooOooo---</p>
 							</div>
 						</li>
 						
@@ -101,7 +101,7 @@
 								
 								<p>A church parade was held but none of the Gympie lads attended. It happened to be a voluntary one! We are all keeping in pretty good health and hope you all are at home. Today is payday, we are to get paid every fortnight, this time we will get 11 days. I am only drawing half of mine and banking the rest. Love to all.</p>
 								
-								<p>---oooOooo---</p>
+								<p class="end-flourish">---oooOooo---</p>
 							</div>
 						</li>
 					</ol>
@@ -122,7 +122,7 @@
 						
 								<p>The cap Mum spoke of will be very acceptable and it is jolly  good of Miss Goodall to make it.  She is all-good.  I will write to her when I get it.  Do not take any notice of any rumour you hear about us leaving here. No one knows when it will be - although things seem to be getting pushed along as fast as possible here.  Just got word a while ago that we were to be inoculated tomorrow, by jove it’s getting solid, we are like a lot of cattle, they will have us disabled before we leave here.  If we kick against it it means the kick out., so we will have to grin and bear it. Between 50 and 60 more men will be coming to Camp tonight – most of them for our Company, so we will be up to full strength.   Over 1050 letters have been posted from the Camp Y.M.C.A. since last Friday.</p>
 								
-								<p>---oooOooo---</p>
+								<p class="end-flourish">---oooOooo---</p>
 							</div>
 						</li>
 				
@@ -132,7 +132,7 @@
 								
 								<p>It is Saturday morning and nearly all our Coy. are half dead from the effects of inoculation which took place yesterday afternoon. It is absolutely deadly. It is nothing for two or three fellows to drop clean out to it while on parade without any warning whatever. We are just beginning to feel the vaccination and were inoculated on the same arm and have to wear that useful member in a sling. It effects one all over  -  head, back and everywhere else.  Just after writing home on Thursday night, the parcel of eatables was brought to me. It was just the thing and the chaps in our tent were talking of writing to Mrs. Baker and telling her what they thought of her. Fancy that. We still have some cake and coconut ice left. Yesterday was pay-day although it should have been last Monday but the pay sheet was not ready. I started an account in the Commonwealth Savings Bank, there is a branch here in camp, and I have arranged for 2/6 (Two Shillings and Six Pence) a day to be placed to my credit while we are away. We do not know when we will leave here but think it will be soon. We will all be allowed to have our vote today.  Breakfast is ready so I will close with love to you all at home.</p>
 								
-								<p>---oooOooo---</p>
+								<p class="end-flourish">---oooOooo---</p>
 							</div>
 						</li>
 						
@@ -146,7 +146,7 @@
 					
 								<p>Your letters are very welcome and I always look forward to them.  We will not be leaving here before next Tuesday, so I will be able to receive a few more yet, will I not?  Mother was out to the camp today with Jennie, they brought some cakes and eggs which were very welcome.  After seeing Mum off I met Kate Jory who was here with some other girls. I had about five minutes talk with her but had to slide off as our Coy. was being paid and I did not want to be late for that.  Things are going on just the same as usual and nothing exciting occurs in our camp life. There was a bayonet fixing and unfixing competition held today and the prize was ten shillings which was won by H Coy.. Sorry to say our lads did not come up to the mark at that game, but on the whole Col. Lee was quite satisfied.  Every morning before breakfast the whole of the Infantry go for a couple of miles march  -  it is much better than drilling and gives us an appetite for breakfast.  I have not much news to tell you Dot, and not much time either so will close with the best of love to you all.</p>
 								
-								<p>---oooOooo---</p>
+								<p class="end-flourish">---oooOooo---</p>
 							</div>
 						</li>
 				
