@@ -84,7 +84,7 @@ nav{
 	position: sticky;
 	top: 0px;
 	background: #343434;
-	min-width: 690px; /* correct size? */
+	min-width: 690px;
 	border-left: 1px solid #343434;
 }
 
@@ -325,8 +325,11 @@ footer a{
 		margin-bottom: 20px; */
 	}
 	
+	nav{
+		min-width: 375px;
+	}
 	nav a{
-		padding: 10px 20px 10px 20px;
+		padding: 10px 15px 10px 15px;
 	}
 	
 	nav+nav{
