@@ -222,7 +222,7 @@ article li{
 .post-card div, .letter div{
 	font-family: 'Homemade Apple', cursive;
 	border: 1px black solid;
-	width: 800px;
+	max-width: 800px;
 	margin: auto;
 	padding: 10px;
 	/* background: #ffd; */
@@ -231,7 +231,7 @@ article li{
 	https://www.freepik.com/free-photo/grunge-vintage-old-paper-background_1273370.htm#page=1&query=old%20paper&position=0 */
 }
 
-.post-card div h5, .post-card div p, .letter div h5, .letter div p{
+.post-card div p, .letter div p{
 	font-family: 'Homemade Apple', cursive;
 	text-align: right;
 	padding-left: 20px;
@@ -246,9 +246,9 @@ article li{
 	column-count: 2;
 }
 
-.post-card div p+p+p, .letter div p+p+p{
-	text-align: center;
-	column-count: 1;
+.end-flourish{
+	column-count: 1 !important;
+	text-align: center !important;
 }
 
 fieldset{
