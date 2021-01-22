@@ -16,11 +16,13 @@
 		  <ul>
 			<li><a href="./index.php">Home</a></li>
 			<li><a href="./letters.php">Letters &amp; Post Cards</a></li>
-			<li><a href="">Related Links</a></li>
+			<li><a href="./links.php">Related Links</a></li>
 			<li><a href="./contact.php" class="current-page">Contact </a></li>
 		  </ul>
 	</nav>
-	
+	<main>
+	<h2>Letters & Postcards</h2>
+	<p>Do you have comments? Or wish to share stories? Please contact us using the form below.</p>
 	<form action="https://titan.csit.rmit.edu.au/~e54061/wp/testcontact.php" method="post">
 		<fieldset>
 			<legend>Contact Us</legend>
@@ -44,5 +46,6 @@
 		</fieldset>
 		<input type="submit" name="send" value="Send">
 	</form>
+	</main>
 </body>
 </html>
