@@ -20,7 +20,7 @@
       <h1>ANZAC Douglas Raymond Baker</h1>
       <h1>- Letters Home -</h1>
       <!-- Original image below sourced for educational purposes: https://www.sites.google.com/site/anzacdouglasraymondbaker/home. Photograph courtesy of : John Oxley Library, State Library of Queensland [Image number: 702692-19141024-s0023-0027]-->
-      <img src="../../media/drbaker.jpg" alt="">
+      <img src="../../media/drbaker.jpg" alt="Portrait of Douglas Raymond Baker in army uniform">
     </header>
 
     <nav>
