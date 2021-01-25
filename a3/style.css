@@ -1,0 +1,347 @@
+/* Insert your styles here */
+
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+
+
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;	
+	font-family: 'Playfair Display', serif;
+}
+
+body{
+	background: #aebebe;
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Michroma', sans-serif;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+header{
+	text-align: center;	
+	margin: 20px;
+	margin: 0;
+	padding-bottom: 20px;
+	background-image: radial-gradient(#ffFF97, #becebe);
+}
+
+h1{
+	font-size: 3em;
+}
+
+header h1+h1{
+	font-size: 2em;
+}
+
+h2{
+	font-size: 2em;
+}
+
+h3{
+	font-size: 1.6em;
+}
+
+h4{
+	font-size: 1.2em;
+}
+
+h2+h2{
+	font-size: 1.1em;
+}
+
+header img{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 30%;	
+	max-width: 200px;
+}
+
+nav{
+	display: block;
+	position: sticky;
+	top: 0px;
+	background: #343434;
+	min-width: 690px;
+	border-left: 1px solid #343434;
+}
+
+/* Selects subnav on Letters page */
+nav+nav{
+	top: 40px;
+	background: #445454;
+}
+
+nav li{
+	float: left;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+nav a{
+	display: inline-block;
+	padding: 10px 40px;
+}
+
+nav a:link, nav a:visited{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+nav a:hover, nav a:active{
+	color: #000000;
+	background-color: #ffffff;
+}
+
+ul{
+	list-style-type: none;	
+	overflow: hidden;
+	padding: 0;
+}
+
+.current-page{
+	background-color: #bebebe;
+	color: #000000 !important;
+	border-top: 1px solid #343434;
+	border-bottom: 1px solid #343434;
+}
+
+main{
+	margin-top: 50px;
+	margin-bottom: 150px;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+/* Affects Related Links Page */
+main a{
+	display: block;
+	line-height: 2em;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	transition: background-color, color;
+	transition-duration: 1s;
+}
+
+main a:link, main a:visited{
+	color: #000000;
+	text-decoration: underline;
+}
+
+main a:hover, main a:active{
+	color: #FFFFFF;
+	background-color: #123456;
+	text-decoration: none;
+}
+
+/* Parallax scrolling background images */
+.background-image{
+	height: 543px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	margin:0;
+	background-size: contain;
+}
+
+#image-1{
+	/* Original image below sourced for educational purposes: https://www.iwm.org.uk/history/15-photos-of-the-anzacs-at-gallipoli. */
+	background-image: url("../../media/road-making-party.jpg");
+}
+
+#image-2{
+	/* Original image below sourced for educational purposes: https://www.iwm.org.uk/history/15-photos-of-the-anzacs-at-gallipoli. */
+	background-image: url("../../media/dug-outs-at-gaba-tepe.jpg");
+}
+
+#image-3{
+	/* Original image below sourced for educational purposes: https://www.iwm.org.uk/history/15-photos-of-the-anzacs-at-gallipoli. */
+	background-image: url("../../media/anzac-cove.jpg");
+}
+
+p{
+	margin-bottom: 30px;
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+p:last-child{
+	margin-bottom: 70px; /* what to do about this?*/
+}
+
+dl{
+	column-count: 2;	
+}
+
+dt{
+	font-style: italic;
+	font-weight: bold;
+}
+dd{
+	text-indent: 20px;
+}
+
+article h3{
+	padding-top: 80px;
+}
+
+article li{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+li div{
+	border: 1px black solid;
+	max-width: 800px;
+	margin: auto;
+	padding: 10px;
+	background-image: url("../../media/grunge-vintage-old-paper-background.jpg");
+	/* <a href='https://www.freepik.com/photos/background'>Background photo created by aopsan - www.freepik.com</a>
+	https://www.freepik.com/free-photo/grunge-vintage-old-paper-background_1273370.htm#page=1&query=old%20paper&position=0 */
+}
+
+li div p{
+	font-family: 'Homemade Apple', cursive;
+	text-align: right;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+li div p+p{
+	text-align: left;
+}
+
+.post-card div p+p{
+	column-count: 2;
+}
+
+li div p:last-child{
+	column-count: 1 !important;
+	text-align: center !important;
+}
+
+fieldset{
+	padding: 20px;
+	max-width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+}
+form label{
+	display: inline-block;
+	width: 130px;
+	/* align-content: first; */
+	padding: 5px;
+}
+
+input[type='checkbox']{
+	width: auto;
+	margin-left: 132px;
+}
+
+form input{
+	width: 227px;
+	border-radius: 5px;
+	font-size: 105%;
+	margin-top: 10px;
+	padding: 4px;
+}
+
+form textarea{
+	width: 227px;
+	height: 200px;
+	border-radius: 5px;
+	vertical-align: top;
+	margin-top: 5px;
+	font-size: 105%;
+	padding: 4px;
+}
+
+input[type='submit']{
+	padding: 10px 10px 10px 10px;
+	width: 120px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	box-shadow: 1px 1px #000000;
+}
+
+footer {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	padding: 0;
+	background: #343434;
+	color: white;
+	font-size: 0.8em;
+	text-align: center;
+	padding: 10px;
+	margin-left: 0;
+}
+
+footer div{
+	line-height: 2.4em;
+}
+
+footer a{
+	color: #ffffff;
+}
+
+/* For mobile size (roughly) */
+@media screen and (max-width: 600px) {
+	/* Parallax effect doesn't work on iOS */
+	.background-image{
+		background-attachment: local;
+		width: 100%;
+		height: 400px;
+	}
+	
+	nav{
+		min-width: 375px;
+	}
+	nav a{
+		padding: 10px 10px 10px 10px;
+	}
+	
+	nav+nav{
+		top: 38px;
+	}
+	
+	dl{
+		column-count: 1;
+	}
+
+	fieldset{
+		max-width: 250px;
+	}
+	
+	form input{
+		margin-top: 0px;
+	}
+	
+	input[type='checkbox']{
+		margin-left: 0px;
+	}
+	
+	footer div{
+		line-height: 1.4em;
+		font-size: 90%;
+	}
+	
+	*{
+		font-size:95%;
+	}
+}
