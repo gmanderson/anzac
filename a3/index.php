@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="This site records the letters home during WW1 from ANZAC Douglas Raymond Baker, from the time he left Gympie, Queensland, Australia.">
-    <meta name="author" content="Ian Stuart Baker">
-    
-    <title>ANZAC Douglas Raymond Baker - Letters Home - Home</title>
-    
+<?php
+  error_reporting(E_ALL);
+  require_once("tools.php");
+
+     top_module("ANZAC Douglas Raymond Baker - Letters Home - Home");
+    ?>
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>">
