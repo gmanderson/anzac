@@ -75,6 +75,7 @@ nav{
 	background: #343434;
 	min-width: 690px;
 	border-left: 1px solid #343434;
+	z-index: 1;
 }
 
 /* Selects subnav on Letters page */
@@ -373,17 +374,21 @@ div.post-card div {
 	}
 	
 .front{
-	transform: rotateY(0deg);
+	transform: rotateX(0deg);
+}
+
+.post-card div:nth-child(1) img{
+	opacity: 0.6;
 }
 
 .back{
-	transform: rotateY(180deg);
+	transform: rotateX(180deg);
 }
 
 .turn-front{
-	transform: rotateY(180deg);
-	}
+	transform: rotateX(180deg);
+}
 	
 .turn-back{
-	transform: rotateY(360deg);
+	transform: rotateX(360deg);
 	}
