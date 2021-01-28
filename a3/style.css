@@ -206,7 +206,7 @@ li div{
 	border: 1px black solid;
 	max-width: 800px;
 	margin: auto;
-	padding: 10px;
+	padding: 0px;
 }
 
 li div p{
@@ -361,8 +361,8 @@ img{
 
 div.post-card div {
 	border: 1px black groove;
-	height: calc(100% - 10px);
-	width: calc(100% - 10px);
+	height: 100%;
+	width: 100%;
 	box-sizing: border-box;
 	position: absolute;
 	transition: 4s;
