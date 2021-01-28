@@ -2,8 +2,8 @@
   error_reporting(E_ALL);
   require_once("tools.php");
 
-     top_module("ANZAC Douglas Raymond Baker - Letters Home - Home");
-    ?>
+  top_module("ANZAC Douglas Raymond Baker - Letters Home - Home");
+?>
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>">
