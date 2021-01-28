@@ -346,13 +346,13 @@ footer a{
 	}
 }
 
-/* Flipping styles needs to be edited*/
+/* Flipping styles needs to be edited. Needs different z-index*/
 div.post-card{
-	height: 300px;
-	width: 500px;
+	height: 400px;
+	/* width: 500px; */
 	box-sizing: border-box;
 	overflow: auto;
-	padding: 5px;
+	padding: 0px;
 	position: relative;
 }
 
@@ -362,8 +362,8 @@ img{
 }
 
 div.post-card div {
-	border: 2px black groove;
-	height:calc(100% - 10px);
+	border: 1px black groove;
+	height: calc(100% - 10px);
 	width: calc(100% - 10px);
 	box-sizing: border-box;
 	position: absolute;
@@ -371,27 +371,18 @@ div.post-card div {
 	-webkit-backface-visibility: hidden;
 	}
 	
-div.post-card div:nth-child(1){
+.front{
 	transform: rotateY(0deg);
 }
 
-div.post-card div:nth-child(2) {
+.back{
 	transform: rotateY(180deg);
 }
 
-p{
-	column-count: 2;
-	column-rule-style: solid;
-	column-rule-width: 1px;
-	column-fill: auto;
-	padding: 10px;
-	font-family: cursive;
-}
-
-div.post-card:hover div:nth-child(1){
+.turn-front{
 	transform: rotateY(180deg);
 	}
 	
-div.post-card:hover div:nth-child(2) {
+.turn-back{
 	transform: rotateY(360deg);
 	}
