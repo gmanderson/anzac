@@ -72,12 +72,22 @@
 					
 					<ol>
 						<li class="post-card">Post Card. August 25th 1914.
-							<div>
-								<p>August 25th 1914.</p>
+							<div class="post-card"> <!-- Should this be identified using other CSS -->
 								
-								<p>Just have a chance to write a few lines at a small shop near the Camp. We had about four hours in Brisbane before going to Camp and had a good look round. Arrived in Camp about 6 p.m. and all the Gympie lads [Infantry] were placed in one tent [11 of us].  The Light Horse are nearly a mile from us. Of course it was my luck to be made Tent Orderly for the first day – getting the tucker and cleaning up. We have had nothing issued to us yet, so just as well I brought something.  There is no child’s play in this camp – plenty of hard work – they mean business. We have a free hand at night so far and can write as we like.  Saw Herb as we were marching to the Camp. He was going back from work and I had only time to shake hands with him – could not leave the ranks. We will be under Captain Jackson. He has been appointed Captain of the Northern Rivers men and managed to get us in with him. Cannot write any more, am in a hurry. Will write more later on. Am feeling quite homesick. Had our feet examined today, teeth tomorrow I think.</p>
+								<div class="front">
+									<img src="26734.jpg" alt="">
+								</div>
 								
-								<p>---oooOooo---</p>
+								<div class="back">
+									
+									<p>August 25th 1914.</p>
+									
+									<p>Just have a chance to write a few lines at a small shop near the Camp. We had about four hours in Brisbane before going to Camp and had a good look round. Arrived in Camp about 6 p.m. and all the Gympie lads [Infantry] were placed in one tent [11 of us].  The Light Horse are nearly a mile from us. Of course it was my luck to be made Tent Orderly for the first day – getting the tucker and cleaning up. We have had nothing issued to us yet, so just as well I brought something.  There is no child’s play in this camp – plenty of hard work – they mean business. We have a free hand at night so far and can write as we like.  Saw Herb as we were marching to the Camp. He was going back from work and I had only time to shake hands with him – could not leave the ranks. We will be under Captain Jackson. He has been appointed Captain of the Northern Rivers men and managed to get us in with him. Cannot write any more, am in a hurry. Will write more later on. Am feeling quite homesick. Had our feet examined today, teeth tomorrow I think.</p>
+									
+									<p>---oooOooo---</p>
+								
+								</div>
+								
 							</div>
 						</li>
 				
