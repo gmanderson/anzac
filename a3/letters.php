@@ -75,7 +75,7 @@
 							<div class="post-card"> <!-- Should this be identified using other CSS -->
 								
 								<div class="front">
-									<img src="26734.jpg" alt="">
+									<img src="../../media/anzac-cove.jpg" alt="">
 								</div>
 								
 								<div class="back">
@@ -299,4 +299,6 @@
 		</footer>
 	
 	</body>
+	<script src="script.js?t=<?= filemtime("script.js"); ?>"> /* Check how to alter this */
+		  </script>
 </html>
