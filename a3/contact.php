@@ -1,3 +1,9 @@
+<?php
+  error_reporting(E_ERROR | E_WARNING | E_PARSE);
+  require_once("tools.php");
+  
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -44,7 +50,8 @@
 			<h2>Contact</h2>
 			<p>Do you have comments? Or wish to share stories? Please contact us using the form below.</p>
 	
-			<form action="https://titan.csit.rmit.edu.au/~e54061/wp/testcontact.php" method="post">
+			<!-- <form action="https://titan.csit.rmit.edu.au/~e54061/wp/testcontact.php" method="post"> -->
+			<form method="post">
 				<fieldset>
 					<label for="name">Name</label>
 					<input type="text" id="name" name="name" placeholder="Ian Baker" required>
@@ -72,7 +79,14 @@
 				</fieldset>
 				<input type="submit" name="send" value="Send">
 			</form>
+			
+			<?php
+			debug();
+			?>
+		
 		</main>
+		
+
 		
 		<footer>
 			  <div>&copy;

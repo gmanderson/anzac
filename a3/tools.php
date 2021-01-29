@@ -15,4 +15,19 @@ function top_module($pageTitle){
 OUTPUT;
   echo $title;
 }
+
+function debug(){
+  echo "<pre>POST Output​:";
+  print_r($_POST);
+  echo "</pre>";
+  
+  echo "<pre>​GET Output:";
+  print_r($_GET);
+  echo "</pre>";
+  
+  echo "<pre>​SESSION Output:";
+  print_r($_SESSION);
+  echo "</pre>";
+}
+
 ?>
