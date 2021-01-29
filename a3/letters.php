@@ -92,7 +92,14 @@
 						</li>
 				
 						<li class="letter">August 28th. 1914.
-							<div>
+							<div class="letter">
+								
+								<div class="envelope">
+									<img src="../../media/old-envelope-1-1157389.jpg" alt="">
+									<!-- https://www.freeimages.com/photo/old-envelope-1-1157389 -->
+								</div>
+								
+								<div class="letter-content">
 								<p>August 28th. 1914.</p>
 								
 								<p>We are doing plenty of hard work, the officers here think we will be sent straight into the firing line when we get there and the men all seem eager for it. Taking things altogether the life here is not too bad. All the Gympie fellows are very decent and we stick together. Today we were issued with new rifles and bayonets, etc. but so far no uniform.  My regimental number is 692 but you need not put that in the address of any letters. We were advised to let our people know our number in case  - - - -.</p>
@@ -100,6 +107,7 @@
 								<p>Yesterday about 150,000 rounds of ball cartridges arrived, we will have to go through a stiff shooting test. Our feet are examined every day. We sit in a long row with bare feet sticking out. I will have to dress for parade now so hooray with best love from Ray.</p>
 								
 								<p>---oooOooo---</p>
+								</div>
 							</div>
 						</li>
 						
