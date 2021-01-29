@@ -11,7 +11,7 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;	
-	font-family: 'Playfair Display', serif;
+
 }
 
 body{
@@ -19,6 +19,7 @@ body{
 	max-width: 1280px;
 	margin-left: auto;
 	margin-right: auto;
+	font-family: 'Playfair Display', serif;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -374,7 +375,7 @@ div.post-card div {
 	}
 	
 .front{
-	transform: rotateX(0deg);
+	transform: rotateY(0deg);
 }
 
 .post-card div:nth-child(1) img{
@@ -382,13 +383,13 @@ div.post-card div {
 }
 
 .back{
-	transform: rotateX(180deg);
+	transform: rotateY(180deg);
 }
 
 .turn-front{
-	transform: rotateX(180deg);
+	transform: rotateY(180deg);
 }
 	
 .turn-back{
-	transform: rotateX(360deg);
+	transform: rotateY(360deg);
 	}
