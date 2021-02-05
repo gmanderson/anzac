@@ -397,7 +397,6 @@ div.post-card div {
 /* Flipping styles needs to be edited. Needs different z-index*/
 div.letter{
 	height: 500px;
-	/* width: 500px; */
 	box-sizing: border-box;
 	overflow: auto;
 	padding: 0px;
@@ -421,19 +420,3 @@ div.letter div {
 	/* <a href='https://www.freepik.com/photos/background'>Background photo created by aopsan - www.freepik.com</a>
 	https://www.freepik.com/free-photo/grunge-vintage-old-paper-background_1273370.htm#page=1&query=old%20paper&position=0 */
 	}
-	
-.envelope{
-	/* transform: rotateY(0deg); */
-}
-
-.letter div:nth-child(1) img{
-	opacity: 0.6;
-}
-
-.letter-content{
-	z-index: -1;
-}
-
-.envelope-remove{
-	transform: translateY(500px);
-}
