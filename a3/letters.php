@@ -71,8 +71,8 @@
 					<p>On the first page of the exercise book Aunt Alice has written:- Book No. I written by Alice Baker. Letters received from D. R. Baker after his enlistment for the war  Sept.  1914.</p>
 					
 					<ol>
-						<li class="post-card">Post Card. August 25th 1914.
-							<div class="post-card"> <!-- Should this be identified using other CSS -->
+						<li>Post Card. August 25th 1914.
+							<div class="post-card correspondence">
 								
 								<div class="front">
 									<img src="../../media/anzac-cove.jpg" alt="">
@@ -91,15 +91,15 @@
 							</div>
 						</li>
 				
-						<li class="letter">August 28th. 1914.
-							<div class="letter">
+						<li>August 28th. 1914.
+							<div class="letter correspondence">
 								
-								<div class="envelope">
+								<div class="front">
 									<img src="../../media/old-envelope-1-1157389.jpg" alt="">
 									<!-- https://www.freeimages.com/photo/old-envelope-1-1157389 -->
 								</div>
 								
-								<div class="letter-content">
+								<div class="back">
 								<p>August 28th. 1914.</p>
 								
 								<p>We are doing plenty of hard work, the officers here think we will be sent straight into the firing line when we get there and the men all seem eager for it. Taking things altogether the life here is not too bad. All the Gympie fellows are very decent and we stick together. Today we were issued with new rifles and bayonets, etc. but so far no uniform.  My regimental number is 692 but you need not put that in the address of any letters. We were advised to let our people know our number in case  - - - -.</p>
@@ -111,8 +111,14 @@
 							</div>
 						</li>
 						
-						<li class="post-card">Post Card, August 31st. 1914.
-							<div>
+						<li>Post Card, August 31st. 1914.
+							<div class="post-card correspondence">
+								
+								<div class="front">
+									<img src="../../media/anzac-cove.jpg" alt="">
+								</div>
+								
+								<div class="back">
 								<p>August 31st. 1914.</p>
 								
 								<p>On Saturday when we came into camp from drill at 12 o’clock, we were told that the Commandant was very pleased with the progress made and had granted us a half holiday so the Gympie lads decided to go to the city. We had a good time in Brisbane and had tea at a fish shop.  Met Herb at about 7 p.m. and we all went to the Empire but the show was very poor. We have had issued to us two towels, two pairs under-pants, two singlets, two pairs socks, a sweater and a cake of soap. I think we will get boots in a day or two and other things.
@@ -123,6 +129,8 @@
 								A church parade was held but none of the Gympie lads attended. It happened to be a voluntary one! We are all keeping in pretty good health and hope you all are at home. Today is payday, we are to get paid every fortnight, this time we will get 11 days. I am only drawing half of mine and banking the rest. Love to all.</p>
 
 								<p>---oooOooo---</p>
+								
+								</div>
 							</div>
 						</li>
 					</ol>
@@ -131,7 +139,7 @@
 				<section>
 					<h4>September</h4>
 					<ol>
-						<li class="letter">Thursday Sept. 3rd. 1914.
+						<li>Thursday Sept. 3rd. 1914.
 							<div>
 								<p>Thursday Sept. 3rd. 1914.</p>
 								
