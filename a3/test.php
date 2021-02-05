@@ -15,6 +15,7 @@
   if(flock($fp, LOCK_UN)){
     echo 'unlocked';
   }
+  
 
   
   if(($fp = fopen("./test.txt", "r")) && flock($fp, LOCK_SH) !== false){
