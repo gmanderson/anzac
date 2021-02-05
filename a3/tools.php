@@ -77,7 +77,7 @@ echo $html;
 
 function loadDocuments($filename){
   // Unsure why flock needs the lock argument in ''
-  if( ($fp = fopen($filename, "r")) && (flock($fp, LOCK_EX)) !== false ){
+  if( ($fp = fopen($filename, "r")) && (flock($fp, 'LOCK_EX')) !== false ){
     echo 'success';
     
     $headings = fgetcsv($fp, 0, "\t");
