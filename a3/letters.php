@@ -30,7 +30,7 @@
 			
 			<?php
 			
-			loadDocuments("http://titan.csit.rmit.edu.au/~e54061/wp/letters-home.txt");
+			$associativeRecords = loadDocuments("http://titan.csit.rmit.edu.au/~e54061/wp/letters-home.txt");
 			
 			?>
 			
@@ -42,6 +42,11 @@
 					<p>On the first page of the exercise book Aunt Alice has written:- Book No. I written by Alice Baker. Letters received from D. R. Baker after his enlistment for the war  Sept.  1914.</p>
 					
 					<ol>
+
+						<?php
+							displayCorrespondence($associativeRecords);
+						?>
+						
 						<li>Post Card. August 25th 1914.
 							<div class="post-card correspondence">
 								
