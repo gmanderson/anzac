@@ -28,6 +28,12 @@
 		<main>
 			<h2>Letters & Postcards</h2>
 			
+			<?php
+			
+			loadDocuments("http://titan.csit.rmit.edu.au/~e54061/wp/letters-home.txt");
+			
+			?>
+			
 			<article id="1914">
 				<h3>1914</h3>
 				
