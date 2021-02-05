@@ -76,8 +76,7 @@ echo $html;
 }
 
 function loadDocuments($filename){
-  // Unsure why flock needs the lock argument in ''
-  if( ($fp = fopen($filename, "r")) && (flock($fp, LOCK_EX)) !== false ){
+  if( ($fp = fopen("./test.txt", "r")) && (flock($fp, LOCK_SH)) !== false ){
     echo 'success';
     
     $headings = fgetcsv($fp, 0, "\t");
@@ -91,23 +90,7 @@ function loadDocuments($filename){
   }else{
     echo "file unavailable";
   }
-  // if($fp = fopen($filename, "r")){
-  //   echo 'file opened';
-  // };
-  // if(flock($fp, LOCK_SH) !== false){
-  //   echo 'success';
-  //   
-  //   $headings = fgetcsv($fp, 0, "\t");
-  //   while( ($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false ){
-  //     $records[] = $aLineOfCells;
-  //   }
-  // flock($fp, LOCK_UN);
-  // fclose($fp);
-  // echo "<p>{$headings[0]}</p>";
-  // echo "<p>{$records[0][0]}</p>";
-  // }else{
-  //   echo "file not locked";
-  // }
+
 
 }
 
