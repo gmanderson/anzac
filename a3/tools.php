@@ -59,13 +59,9 @@ function bottom(){
     </script>
 
   Gerard Anderson s3318814. Last modified $lastModified. <a href="https://github.com/s3318814/wp">GitHub Repository</a></div>
-      
-  
-  
+        
   <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
       
-
-
   <div>
   <button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button>
 </div>
@@ -76,6 +72,42 @@ function bottom(){
 </html>
 OUTPUT;
 echo $html;
+
+}
+
+function loadDocuments($filename){
+  // Unsure why flock needs the lock argument in ''
+  if( ($fp = fopen($filename, "r")) && (flock($fp, LOCK_EX)) !== false ){
+    echo 'success';
+    
+    $headings = fgetcsv($fp, 0, "\t");
+    while( ($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false ){
+      $records[] = $aLineOfCells;
+    }
+  flock($fp, LOCK_UN);
+  fclose($fp);
+  echo "<p>{$headings[0]}</p>";
+  echo "<p>{$records[0][0]}</p>";
+  }else{
+    echo "file unavailable";
+  }
+  // if($fp = fopen($filename, "r")){
+  //   echo 'file opened';
+  // };
+  // if(flock($fp, LOCK_SH) !== false){
+  //   echo 'success';
+  //   
+  //   $headings = fgetcsv($fp, 0, "\t");
+  //   while( ($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false ){
+  //     $records[] = $aLineOfCells;
+  //   }
+  // flock($fp, LOCK_UN);
+  // fclose($fp);
+  // echo "<p>{$headings[0]}</p>";
+  // echo "<p>{$records[0][0]}</p>";
+  // }else{
+  //   echo "file not locked";
+  // }
 
 }
 
