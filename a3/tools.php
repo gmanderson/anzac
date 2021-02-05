@@ -76,22 +76,63 @@ echo $html;
 }
 
 function loadDocuments($filename){
-  if( ($fp = fopen("./test.txt", "r")) && (flock($fp, LOCK_SH)) !== false ){
-    echo 'success';
-    
+  // if( ($fp = fopen($filename, "r")) && (flock($fp, LOCK_SH)) !== false ){
+    if( ($fp = fopen($filename, "r")) !== false ){    
     $headings = fgetcsv($fp, 0, "\t");
+
     while( ($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false ){
-      $records[] = $aLineOfCells;
+        $records[] = $aLineOfCells;
+      }
+    
+    // Reassemble headings as keys in new associative array
+    $arrLength = count($records);
+    for($i = 0; $i<=$arrLength; $i++){
+      for($j = 0; $j<=$arrLength; $j++){
+        $associativeRecords[$i][$headings[$j]] = $records[$i][$j];
+      }
     }
+    
   flock($fp, LOCK_UN);
   fclose($fp);
-  echo "<p>{$headings[0]}</p>";
-  echo "<p>{$records[0][0]}</p>";
+  echo '<pre>';
+  print_r($associativeRecords);
+  echo '</pre>';
+  
+  return $associativeRecords;
+  
   }else{
     echo "file unavailable";
   }
+}
+
+function displayCorrespondence($associativeRecords){
+  $arrLength = count($associativeRecords);
+  for($i = 0; $i<=$arrLength; $i++){
+    
+      if($associativeRecords[$i]['Type'] === 'Postcard'){
+        $documentType = 'post-card';
+      }else{
+        $documentType = 'letter';
+      }
 
 
+      
+    echo '<li>'.$associativeRecords[$i]['Type'].' '.$associativeRecords[$i]['DateStart'];
+    
+    echo '<div class="'.$documentType.' correspondence">';
+    
+      echo '<div class="front">';
+      echo '<img src="../../media/anzac-cove.jpg" alt="">';
+      echo '</div>';
+    
+      echo '<div class="back">';
+        echo '<p>'.$associativeRecords[$i]['DateStart'].'</p>';
+        echo '<p>'.$associativeRecords[$i]['Content'].'</p>';
+        echo '<p>---oooOooo---</p>';
+      echo '</div>';     
+    echo '</div>';
+  echo '</li>';
+  }
 }
 
 function debug(){
