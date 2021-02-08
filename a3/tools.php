@@ -111,7 +111,9 @@ function loadDocuments($filename){
     echo "file unavailable";
   }
   
-  // // if( ($fp = fopen($filename, "r")) && (flock($fp, LOCK_SH)) !== false ){
+  // THIS LINE FAILS// if( ($fp = fopen($filename, "r")) && (flock($fp, LOCK_SH)) !== false ){
+    
+//     THIS CODE WORKS WITHOUT FLOCK
 //     if( ($fp = fopen($filename, "r")) !== false ){    
 //       $headings = fgetcsv($fp, 0, "\t");
 //       while( ($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false ){
