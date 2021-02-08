@@ -367,6 +367,7 @@ div.post-card div {
 	box-sizing: border-box;
 	position: absolute;
 	transition: 4s;
+	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	background-image: url("../../media/grunge-vintage-old-paper-background.jpg");
 	/* <a href='https://www.freepik.com/photos/background'>Background photo created by aopsan - www.freepik.com</a>
@@ -391,6 +392,10 @@ div.post-card div {
 	
 .turn-back{
 	transform: rotateY(360deg);
+background-image: url("../../media/grunge-vintage-old-paper-background.jpg");
+/* <a href='https://www.freepik.com/photos/background'>Background photo created by aopsan - www.freepik.com</a>
+https://www.freepik.com/free-photo/grunge-vintage-old-paper-background_1273370.htm#page=1&query=old%20paper&position=0 */
+overflow: auto;
 	}
 	
 	
@@ -415,8 +420,10 @@ div.letter div {
 	box-sizing: border-box;
 	position: absolute;
 	transition: 4s;
+	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
-	background-image: url("../../media/grunge-vintage-old-paper-background.jpg");
-	/* <a href='https://www.freepik.com/photos/background'>Background photo created by aopsan - www.freepik.com</a>
-	https://www.freepik.com/free-photo/grunge-vintage-old-paper-background_1273370.htm#page=1&query=old%20paper&position=0 */
+background-image: url("../../media/grunge-vintage-old-paper-background.jpg");
+/* <a href='https://www.freepik.com/photos/background'>Background photo created by aopsan - www.freepik.com</a>
+https://www.freepik.com/free-photo/grunge-vintage-old-paper-background_1273370.htm#page=1&query=old%20paper&position=0 */
+
 	}
