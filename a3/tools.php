@@ -76,62 +76,70 @@ echo $html;
 }
 
 function loadDocuments($filename){
- if( ($fp = fopen("./test.txt", "r") !== false) ) {
-   echo 'file open';  
-   if ( flock($fp, LOCK_SH) !== false ) {
-     echo 'share lock on';
-     // your file reading code here, cell echoing, unlock and close
-   } else {
-     echo 'share lock returned false';
-   }
- } else{
-   echo "file unavailable";
- }
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+  
+  if( ($fp = fopen($filename, "r")) !== false ){
+    echo 'file open';
+    if(flock($fp, LOCK_SH) !== false){   
+      echo 'share lock on';
+      $headings = fgetcsv($fp, 0, "\t");
+      while( ($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false ){
+        $records[] = $aLineOfCells;
+      }
+    
+      // Reassemble headings as keys in new associative array
+      $arrLengthOuter = count($records);
+      $arrLengthInner = count($records[0]);
+      
+      for($i = 0; $i<$arrLengthOuter; $i++){
+        for($j = 0; $j<$arrLengthInner; $j++){
+          $associativeRecords[$i][$headings[$j]] = $records[$i][$j];
+        }
+      }
+  
+      flock($fp, LOCK_UN);
+      fclose($fp);
+      
+      echo '<pre>';
+      print_r($associativeRecords);
+      echo '</pre>';
+    
+      return $associativeRecords;
+    }else{
+    echo 'share file returned false';
+    }
+  }else{
+    echo "file unavailable";
+  }
+  
   // // if( ($fp = fopen($filename, "r")) && (flock($fp, LOCK_SH)) !== false ){
-  //   if( ($fp = fopen($filename, "r")) !== false ){    
-  //     $headings = fgetcsv($fp, 0, "\t");
-  //     while( ($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false ){
-  //       $records[] = $aLineOfCells;
-  //     }
-  //   
-  //   // Reassemble headings as keys in new associative array
-  //   $arrLengthOuter = count($records);
-  //   $arrLengthInner = count($records[0]);
-  //   
-  //   for($i = 0; $i<$arrLengthOuter; $i++){
-  //     for($j = 0; $j<$arrLengthInner; $j++){
-  //       $associativeRecords[$i][$headings[$j]] = $records[$i][$j];
-  //     }
-  //   }
+//     if( ($fp = fopen($filename, "r")) !== false ){    
+//       $headings = fgetcsv($fp, 0, "\t");
+//       while( ($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false ){
+//         $records[] = $aLineOfCells;
+//       }
+//     
+//     // Reassemble headings as keys in new associative array
+//     $arrLengthOuter = count($records);
+//     $arrLengthInner = count($records[0]);
+//     
+//     for($i = 0; $i<$arrLengthOuter; $i++){
+//       for($j = 0; $j<$arrLengthInner; $j++){
+//         $associativeRecords[$i][$headings[$j]] = $records[$i][$j];
+//       }
+//     }
 // 
-  //   flock($fp, LOCK_UN);
-  //   fclose($fp);
-  //   
-  //   echo '<pre>';
-  //   print_r($associativeRecords);
-  //   echo '</pre>';
-  // 
-  //   return $associativeRecords;
-  // 
-  //   }else{
-  //     echo "file unavailable";
-  //   }
+//     flock($fp, LOCK_UN);
+//     fclose($fp);
+//     
+//     echo '<pre>';
+//     print_r($associativeRecords);
+//     echo '</pre>';
+//   
+//     return $associativeRecords;
+//   
+//     }else{
+//       echo "file unavailable";
+//     }
 }
 
 // DO I NEED MORE THAN ONE FUNCTION? THERE IS THE OTHER DATE ON THE POSTCARD
