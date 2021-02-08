@@ -41,11 +41,12 @@
 					<h4>August</h4>
 					<p>On the first page of the exercise book Aunt Alice has written:- Book No. I written by Alice Baker. Letters received from D. R. Baker after his enlistment for the war  Sept.  1914.</p>
 					
+					<?php
+					displayCorrespondence($associativeRecords);
+				?>
 					<ol>
 
-						<?php
-							displayCorrespondence($associativeRecords);
-						?>
+
 						
 						<li>Post Card. August 25th 1914.
 							<div class="post-card correspondence">
