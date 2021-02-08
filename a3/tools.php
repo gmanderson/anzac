@@ -76,34 +76,77 @@ echo $html;
 }
 
 function loadDocuments($filename){
-  // if( ($fp = fopen($filename, "r")) && (flock($fp, LOCK_SH)) !== false ){
-    if( ($fp = fopen($filename, "r")) !== false ){    
-    $headings = fgetcsv($fp, 0, "\t");
-
-    while( ($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false ){
-        $records[] = $aLineOfCells;
-      }
-    
-    // Reassemble headings as keys in new associative array
-    $arrLength = count($records);
-    for($i = 0; $i<=$arrLength; $i++){
-      for($j = 0; $j<=$arrLength; $j++){
-        $associativeRecords[$i][$headings[$j]] = $records[$i][$j];
-      }
-    }
-    
-  flock($fp, LOCK_UN);
-  fclose($fp);
-  echo '<pre>';
-  print_r($associativeRecords);
-  echo '</pre>';
-  
-  return $associativeRecords;
-  
-  }else{
-    echo "file unavailable";
-  }
+ if( ($fp = fopen("./test.txt", "r") !== false) ) {
+   echo 'file open';  
+   if ( flock($fp, LOCK_SH) !== false ) {
+     echo 'share lock on';
+     // your file reading code here, cell echoing, unlock and close
+   } else {
+     echo 'share lock returned false';
+   }
+ } else{
+   echo "file unavailable";
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  // // if( ($fp = fopen($filename, "r")) && (flock($fp, LOCK_SH)) !== false ){
+  //   if( ($fp = fopen($filename, "r")) !== false ){    
+  //     $headings = fgetcsv($fp, 0, "\t");
+  //     while( ($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false ){
+  //       $records[] = $aLineOfCells;
+  //     }
+  //   
+  //   // Reassemble headings as keys in new associative array
+  //   $arrLengthOuter = count($records);
+  //   $arrLengthInner = count($records[0]);
+  //   
+  //   for($i = 0; $i<$arrLengthOuter; $i++){
+  //     for($j = 0; $j<$arrLengthInner; $j++){
+  //       $associativeRecords[$i][$headings[$j]] = $records[$i][$j];
+  //     }
+  //   }
+// 
+  //   flock($fp, LOCK_UN);
+  //   fclose($fp);
+  //   
+  //   echo '<pre>';
+  //   print_r($associativeRecords);
+  //   echo '</pre>';
+  // 
+  //   return $associativeRecords;
+  // 
+  //   }else{
+  //     echo "file unavailable";
+  //   }
 }
+
+// DO I NEED MORE THAN ONE FUNCTION? THERE IS THE OTHER DATE ON THE POSTCARD
+function convertDate($associativeRecords, $i){
+  $dateToConvert = date_create($associativeRecords[$i]['DateStart']);
+  
+  return date_format($dateToConvert, "jS F Y");
+}
+
+function getYear($associativeRecords, $i){
+  $dateToConvert = date_create($associativeRecords[$i]['DateStart']);
+  
+  return date_format($dateToConvert, "Y");
+}
+
 
 function displayCorrespondence($associativeRecords){
   $arrLength = count($associativeRecords);
@@ -114,10 +157,31 @@ function displayCorrespondence($associativeRecords){
       }else{
         $documentType = 'letter';
       }
-
-
       
-    echo '<li>'.$associativeRecords[$i]['Type'].' '.$associativeRecords[$i]['DateStart'];
+    // $convertedDate = convertDate($associativeRecords, $i);
+    
+    //THIS DETERMINES ARTICLES AND ARTICLE HEADINGS. HELPS WITH NAVIGATION TO YEAR. NEED TO PROCESS YEAR OUT OF ARRAY
+    if($i == 0){
+      echo '<article id="';
+      echo getYear($associativeRecords, $i);
+      echo '">';
+      echo '<h3>';
+      echo getYear($associativeRecords, $i);
+      echo '</h3>';
+      echo '<ol>';
+    }elseif (getYear($associativeRecords, $i) !== getYear($associativeRecords, ($i-1))){
+      echo '</ol>';
+      echo '</article>';
+      echo '<article id="';
+      echo getYear($associativeRecords, $i);
+      echo '">';
+      echo '<h3>';
+      echo getYear($associativeRecords, $i);
+      echo '</h3>';
+      echo '<ol>';
+    }
+    
+    echo '<li>'.$associativeRecords[$i]['Type'].' '.convertDate($associativeRecords, $i);
     
     echo '<div class="'.$documentType.' correspondence">';
     
@@ -132,8 +196,15 @@ function displayCorrespondence($associativeRecords){
       echo '</div>';     
     echo '</div>';
   echo '</li>';
+  
+  if(($i+1) === count($associativeRecords)){
+    echo '</ol>';
+    echo '</article id="end">';
+  }
+  
   }
 }
+
 
 function debug(){
   echo "<pre>POST Output​:";
