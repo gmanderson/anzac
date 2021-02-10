@@ -147,13 +147,11 @@ function loadDocuments($filename){
 // DO I NEED MORE THAN ONE FUNCTION? THERE IS THE OTHER DATE ON THE POSTCARD
 function convertDate($associativeRecords, $i){
   $dateToConvert = date_create($associativeRecords[$i]['DateStart']);
-  
   return date_format($dateToConvert, "jS F Y");
 }
 
 function getYear($associativeRecords, $i){
   $dateToConvert = date_create($associativeRecords[$i]['DateStart']);
-  
   return date_format($dateToConvert, "Y");
 }
 
