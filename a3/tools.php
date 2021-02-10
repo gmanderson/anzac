@@ -3,6 +3,23 @@
 
 // Put your PHP functions and modules here
 function top_module($pageTitle){
+  switch($_SERVER['SCRIPT_NAME']){
+    case "/wp/a3/index.php":
+      $index_current = 'class="current-page"';
+      break;
+    case "/wp/a3/letters.php":
+      $letters_current = 'class="current-page"';
+      break;
+    case "/wp/a3/links.php":
+      $links_current = 'class="current-page"';
+      break;
+    case "/wp/a3/contact.php":
+      $contact_current = 'class="current-page"';
+      break; 
+    default:
+      break; 
+  }
+  
   $title = <<<"OUTPUT"
   <!DOCTYPE html>
   <html lang='en'>
@@ -29,16 +46,16 @@ function top_module($pageTitle){
 <nav>
 <ul>
   <li>
-    <a href="./index.php" class="current-page">Home</a>
+  <a href="./index.php" $index_current>Home</a>
   </li>
   <li>
-    <a href="./letters.php">Letters &amp; Post Cards</a>
+    <a href="./letters.php" $letters_current>Letters &amp; Post Cards</a>
   </li>
   <li>
-    <a href="./links.php">Related Links</a>
+    <a href="./links.php" $links_current>Related Links</a>
   </li>
   <li>
-    <a href="./contact.php">Contact </a>
+    <a href="./contact.php" $contact_current>Contact </a>
   </li>
 </ul>
 </nav>
