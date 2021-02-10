@@ -96,8 +96,8 @@ function loadDocuments($filename){
   
   if( ($fp = fopen($filename, "r")) !== false ){
     echo 'file open';
-    if(flock($fp, LOCK_SH) !== false){   
-      echo 'share lock on';
+    // if(flock($fp, LOCK_SH) !== false){  NOT WORKING AS PER DISCUSSION WITH TREVOR( 
+      // echo 'share lock on';
       $headings = fgetcsv($fp, 0, "\t");
       while( ($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false ){
         $records[] = $aLineOfCells;
@@ -121,9 +121,9 @@ function loadDocuments($filename){
       echo '</pre>';
     
       return $associativeRecords;
-    }else{
-    echo 'share file returned false';
-    }
+    // }else{
+    // echo 'share file returned false';
+    // }
   }else{
     echo "file unavailable";
   }
