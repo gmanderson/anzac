@@ -4,6 +4,32 @@
 
   top_module("ANZAC Douglas Raymond Baker - Letters Home - Home");
   
+  session_start();
+  
+
+
+  
+// $logOutForm = <<<"OUTPUT"
+// <form action="logIO.php" method="post">
+// <span>Logged in as {$_SESSION["user"]["fname"]}</span>
+// <button name=logIO>Log Out</button>
+// </form>
+// OUTPUT;
+//   echo $logOutForm; 
+//   
+//   } else {
+//     $logInForm = <<<"OUTPUT"
+//     <form action="logIO.php" method="post">
+//     <label>Sign in as</label>
+//     <input type=text name=fname>
+//     <button name=logIO>Log In</button>
+//   </form>
+// OUTPUT;
+//   
+//   echo $logInForm;
+//   }
+
+
   if($fp = fopen("./test.txt", "r")){
     echo 'file opened<br>';
   };
@@ -29,4 +55,10 @@
     }
   }
 
+
+echo "<p>The contents of the directory $dir are:</p>";
+exec("ls ./", $output);
+echo '<pre>';
+print_r($output);
+echo '</pre>';
 ?>
