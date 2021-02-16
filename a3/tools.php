@@ -1,7 +1,6 @@
 <?php
   session_start();
 
-// Put your PHP functions and modules here
 function top_module($pageTitle){
   switch($_SERVER['SCRIPT_NAME']){
     case "/wp/a3/index.php":
@@ -43,6 +42,22 @@ function top_module($pageTitle){
   <img src="../../media/drbaker.jpg" alt="Portrait of Douglas Raymond Baker in army uniform">
 </header>
 
+OUTPUT;
+echo $title;
+
+if (isset($_SESSION["user"])) {
+  $logged = 'Logged in as '.$_SESSION["user"]["fname"].'
+  <button name=logIO>Log Out</button>';
+  } else {
+    $logged = '
+    <label>Sign in as</label>
+    <input type=text name=fname>
+    <label> Password </label>
+    <input type=password name=password>
+    <button name=logIO>Log In</button>';
+}
+
+$nav = <<<"OUTPUT"
 <nav>
 <ul>
   <li>
@@ -57,11 +72,30 @@ function top_module($pageTitle){
   <li>
     <a href="./contact.php" $contact_current>Contact </a>
   </li>
-</ul>
-</nav>
 
+</ul>
+
+<div>
+<form action="logIO.php" method="post" autocomplete="off">
+$logged
+</form>
+</div>
+</nav>
 OUTPUT;
-  echo $title;
+echo $nav;
+
+  
+
+  
+//   $logForm = <<<"OUTPUT"
+//   <form action="logIO.php" method="post">
+//   $logged  
+// </form>
+// OUTPUT;
+// 
+// echo $logForm;
+  
+
 }
 
 function bottom(){
@@ -103,12 +137,9 @@ function loadDocuments($filename){
         $records[] = $aLineOfCells;
       }
     
-      // Reassemble headings as keys in new associative array
-      $arrLengthOuter = count($records);
-      $arrLengthInner = count($records[0]);
-      
-      for($i = 0; $i<$arrLengthOuter; $i++){
-        for($j = 0; $j<$arrLengthInner; $j++){
+      // Reassemble headings as keys in new associative array   
+      for($i = 0; $i<count($records); $i++){
+        for($j = 0; $j<count($records[0]); $j++){
           $associativeRecords[$i][$headings[$j]] = $records[$i][$j];
         }
       }
@@ -232,6 +263,9 @@ function displayCorrespondence($associativeRecords){
 
 
 function debug(){
+  echo '<details>';
+  echo '<summary> Debug: click to see more';
+  echo '</summary>';
   echo "<pre>POST Output​:";
   print_r($_POST);
   echo "</pre>";
@@ -243,6 +277,10 @@ function debug(){
   echo "<pre>​SESSION Output:";
   print_r($_SESSION);
   echo "</pre>";
+  
+
+  echo '</details>';
+
 }
 
 ?>
