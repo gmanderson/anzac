@@ -418,7 +418,7 @@ overflow: auto;
 div.letter{
 	height: 500px;
 	box-sizing: border-box;
-	overflow: auto;
+
 	padding: 0px;
 	position: relative;
 }
@@ -440,5 +440,5 @@ div.letter div {
 background-image: url("../../media/grunge-vintage-old-paper-background.jpg");
 /* <a href='https://www.freepik.com/photos/background'>Background photo created by aopsan - www.freepik.com</a>
 https://www.freepik.com/free-photo/grunge-vintage-old-paper-background_1273370.htm#page=1&query=old%20paper&position=0 */
-
+overflow: auto;
 	}
