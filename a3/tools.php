@@ -130,8 +130,7 @@ function loadDocuments($filename){
   
   if( ($fp = fopen($filename, "r")) !== false ){
     echo 'file open';
-    // if(flock($fp, LOCK_SH) !== false){  NOT WORKING AS PER DISCUSSION WITH TREVOR( 
-      // echo 'share lock on';
+    // if(flock($fp, LOCK_SH) !== false){  NOT WORKING AS PER DISCUSSION WITH TREVOR
       $headings = fgetcsv($fp, 0, "\t");
       while( ($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false ){
         $records[] = $aLineOfCells;
@@ -159,81 +158,42 @@ function loadDocuments($filename){
     echo "file unavailable";
   }
   
-  // THIS LINE FAILS// if( ($fp = fopen($filename, "r")) && (flock($fp, LOCK_SH)) !== false ){
-    
-//     THIS CODE WORKS WITHOUT FLOCK
-//     if( ($fp = fopen($filename, "r")) !== false ){    
-//       $headings = fgetcsv($fp, 0, "\t");
-//       while( ($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false ){
-//         $records[] = $aLineOfCells;
-//       }
-//     
-//     // Reassemble headings as keys in new associative array
-//     $arrLengthOuter = count($records);
-//     $arrLengthInner = count($records[0]);
-//     
-//     for($i = 0; $i<$arrLengthOuter; $i++){
-//       for($j = 0; $j<$arrLengthInner; $j++){
-//         $associativeRecords[$i][$headings[$j]] = $records[$i][$j];
-//       }
-//     }
-// 
-//     flock($fp, LOCK_UN);
-//     fclose($fp);
-//     
-//     echo '<pre>';
-//     print_r($associativeRecords);
-//     echo '</pre>';
-//   
-//     return $associativeRecords;
-//   
-//     }else{
-//       echo "file unavailable";
-//     }
 }
 
-// DO I NEED MORE THAN ONE FUNCTION? THERE IS THE OTHER DATE ON THE POSTCARD
+// CONVERTS DATE TO READABALE TEXT-BASED
 function convertDate($associativeRecords, $i){
   $dateToConvert = date_create($associativeRecords[$i]['DateStart']);
   return date_format($dateToConvert, "jS F Y");
 }
 
+// PULLS YEAR FROM DATE
 function getYear($associativeRecords, $i){
   $dateToConvert = date_create($associativeRecords[$i]['DateStart']);
   return date_format($dateToConvert, "Y");
 }
 
-
+// CONVERT TO HEREDOCS ????????????
+// DISPLAYS ARRAY ON AS POSTCARDS AND LETTERS
 function displayCorrespondence($associativeRecords){
   $arrLength = count($associativeRecords);
-  for($i = 0; $i<=$arrLength; $i++){
+  for($i = 0; $i<$arrLength; $i++){
     
       if($associativeRecords[$i]['Type'] === 'Postcard'){
         $documentType = 'post-card';
       }else{
         $documentType = 'letter';
       }
-      
-    // $convertedDate = convertDate($associativeRecords, $i);
     
-    //THIS DETERMINES ARTICLES AND ARTICLE HEADINGS. HELPS WITH NAVIGATION TO YEAR. NEED TO PROCESS YEAR OUT OF ARRAY
+    //DETERMINES ARTICLES AND ARTICLE HEADINGS. HELPS WITH NAVIGATION TO YEAR. ALSO DETERMINES IF SHOULD END PREVIOUS LIST
     if($i == 0){
-      echo '<article id="';
-      echo getYear($associativeRecords, $i);
-      echo '">';
-      echo '<h3>';
-      echo getYear($associativeRecords, $i);
-      echo '</h3>';
+      echo '<article id="'.getYear($associativeRecords, $i).'">';
+      echo '<h3>'.getYear($associativeRecords, $i).'</h3>';
       echo '<ol>';
     }elseif (getYear($associativeRecords, $i) !== getYear($associativeRecords, ($i-1))){
       echo '</ol>';
       echo '</article>';
-      echo '<article id="';
-      echo getYear($associativeRecords, $i);
-      echo '">';
-      echo '<h3>';
-      echo getYear($associativeRecords, $i);
-      echo '</h3>';
+      echo '<article id="'.getYear($associativeRecords, $i).'">';
+      echo '<h3>'.getYear($associativeRecords, $i).'</h3>';
       echo '<ol>';
     }
     
@@ -242,7 +202,11 @@ function displayCorrespondence($associativeRecords){
     echo '<div class="'.$documentType.' correspondence">';
     
       echo '<div class="front">';
-      echo '<img src="../../media/anzac-cove.jpg" alt="">';
+      if ($associativeRecords[$i]['Type'] === 'Postcard'){
+        echo '<img src="../../media/anzac-cove.jpg" alt="">';
+      }else{
+        echo '<img src="../../media/old-envelope-1-1157389.jpg" alt="">';
+      }
       echo '</div>';
     
       echo '<div class="back">';
@@ -255,7 +219,7 @@ function displayCorrespondence($associativeRecords){
   
   if(($i+1) === count($associativeRecords)){
     echo '</ol>';
-    echo '</article id="end">';
+    echo '</article>';
   }
   
   }
