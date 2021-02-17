@@ -22,3 +22,5 @@ for(let i=0; i<correspondence.length; i++){
 	});
 	
 }
+
+let remember = document.querySelector('#remember-me');
