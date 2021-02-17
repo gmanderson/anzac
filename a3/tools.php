@@ -129,7 +129,6 @@ echo $html;
 function loadDocuments($filename){
   
   if( ($fp = fopen($filename, "r")) !== false ){
-    echo 'file open';
     // if(flock($fp, LOCK_SH) !== false){  NOT WORKING AS PER DISCUSSION WITH TREVOR
       $headings = fgetcsv($fp, 0, "\t");
       while( ($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false ){
@@ -146,9 +145,10 @@ function loadDocuments($filename){
       flock($fp, LOCK_UN);
       fclose($fp);
       
-      echo '<pre>';
-      print_r($associativeRecords);
-      echo '</pre>';
+      // FOR TESTING ONLY - PRINTS ARRAY
+      // echo '<pre>';
+      // print_r($associativeRecords);
+      // echo '</pre>';
     
       return $associativeRecords;
     // }else{
@@ -172,6 +172,11 @@ function getYear($associativeRecords, $i){
   return date_format($dateToConvert, "Y");
 }
 
+function getMonth($associativeRecords, $i){
+  $dateToConvert = date_create($associativeRecords[$i]['DateStart']);
+  return date_format($dateToConvert, "F");
+}
+
 // CONVERT TO HEREDOCS ????????????
 // DISPLAYS ARRAY ON AS POSTCARDS AND LETTERS
 function displayCorrespondence($associativeRecords){
@@ -185,17 +190,37 @@ function displayCorrespondence($associativeRecords){
       }
     
     //DETERMINES ARTICLES AND ARTICLE HEADINGS. HELPS WITH NAVIGATION TO YEAR. ALSO DETERMINES IF SHOULD END PREVIOUS LIST
-    if($i == 0){
-      echo '<article id="'.getYear($associativeRecords, $i).'">';
-      echo '<h3>'.getYear($associativeRecords, $i).'</h3>';
-      echo '<ol>';
-    }elseif (getYear($associativeRecords, $i) !== getYear($associativeRecords, ($i-1))){
+
+if($i == 0 || getYear($associativeRecords, $i) !== getYear($associativeRecords, ($i-1))){
+  
+    if(getYear($associativeRecords, $i) !== getYear($associativeRecords, ($i-1))){
       echo '</ol>';
       echo '</article>';
-      echo '<article id="'.getYear($associativeRecords, $i).'">';
-      echo '<h3>'.getYear($associativeRecords, $i).'</h3>';
-      echo '<ol>';
     }
+    echo '<article id="'.getYear($associativeRecords, $i).'">';
+    echo '<h3>'.getYear($associativeRecords, $i).'</h3>';
+  }
+  
+  if($i == 0 || getMonth($associativeRecords, $i) !== getMonth($associativeRecords, ($i-1))){
+    echo '<section>';
+    echo '<h4>'.getMonth($associativeRecords, $i).'</h4>';
+  }
+  
+  if($i == 0 || getYear($associativeRecords, $i) !== getYear($associativeRecords, ($i-1))){
+  echo '<ol>';
+}
+  
+    // if($i == 0){
+    //   echo '<article id="'.getYear($associativeRecords, $i).'">';
+    //   echo '<h3>'.getYear($associativeRecords, $i).'</h3>';
+    //   echo '<ol>';
+    // }elseif (getYear($associativeRecords, $i) !== getYear($associativeRecords, ($i-1))){
+    //   echo '</ol>';
+    //   echo '</article>';
+    //   echo '<article id="'.getYear($associativeRecords, $i).'">';
+    //   echo '<h3>'.getYear($associativeRecords, $i).'</h3>';
+    //   echo '<ol>';
+    // }
     
     echo '<li>'.$associativeRecords[$i]['Type'].' '.convertDate($associativeRecords, $i);
     
@@ -219,6 +244,9 @@ function displayCorrespondence($associativeRecords){
   
   if(($i+1) === count($associativeRecords)){
     echo '</ol>';
+    if(getMonth($associativeRecords, $i) !== getMonth($associativeRecords, ($i-1))){
+      echo '</section>';
+    }
     echo '</article>';
   }
   
