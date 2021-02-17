@@ -29,29 +29,14 @@
 			<h2>Letters & Postcards</h2>
 			
 			<?php
-			
 			$associativeRecords = loadDocuments("http://titan.csit.rmit.edu.au/~e54061/wp/letters-home.txt");
-			
 			?>
 			
 			<?php
 			
 			displayCorrespondence($associativeRecords);
-		?>
-		
-			<article id="1914">
-				<h3>1914</h3>
-				
-				<section>
-					<h4>December</h4>
-					<ol>
-						<li>December 11th. 1914. Mena Camp</li>
-						
-						<li>December, 27th. Mena Camp</li>
-					</ol>
-				</section>
-		
-			</article>
+			?>
+
 		
 		</main>
 		
