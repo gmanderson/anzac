@@ -25,10 +25,9 @@ for(let i=0; i<correspondence.length; i++){
 
 
 // CONTACT PAGE
-console.log('test');
-
 let remember = document.querySelector("#remember-me");
 
-remember.addEventListener('click', {
+remember.addEventListener('click', function(){
 	console.log('test')
+	console.log('test2')
 })
