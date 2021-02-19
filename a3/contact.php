@@ -14,7 +14,7 @@
 			<form id="contact" method="post" autocomplete="off">
 				<fieldset>
 					<label for="name">Name</label>
-					<input type="text" id="name" name="name" placeholder="Ian Baker" required>
+					<input type="text" id="name" name="name" placeholder="Ian Baker" pattern="[A-Za-z .\-']+" title="May consist of letters and limited punctuation (-, ., and ')" required>
 					<br>
 		
 					<label for="email">Email</label>
