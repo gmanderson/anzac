@@ -7,7 +7,7 @@ for(let i=0; i<correspondence.length; i++){
 	correspondence[i].addEventListener('click', function(){
 		
 		if(front[i].classList.contains('front')){
-			console.log('clicked letter');
+			console.log('clicked leter');
 			front[i].classList.remove('front');
 			back[i].classList.remove('back');
 			front[i].classList.add('turn-front');
@@ -23,4 +23,12 @@ for(let i=0; i<correspondence.length; i++){
 	
 }
 
-let remember = document.querySelector('#remember-me');
+
+// CONTACT PAGE
+console.log('test');
+
+let remember = document.querySelector("#remember-me");
+
+remember.addEventListener('click', {
+	console.log('test')
+})
