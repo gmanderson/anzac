@@ -28,6 +28,29 @@ for(let i=0; i<correspondence.length; i++){
 let remember = document.querySelector("#remember-me");
 
 remember.addEventListener('click', function(){
-	console.log('test')
-	console.log('test2')
+	if (remember.checked === true){
+		localStorage.setItem('name', document.querySelector('#name').value)
+		localStorage.setItem('email', document.querySelector('#email').value)
+		localStorage.setItem('mobile', document.querySelector('#mobile').value)
+		localStorage.setItem('remember', 'true')
+		console.log(localStorage.name)
+		console.log(localStorage.remember)
+	}
+	
+	if (remember.checked !== true){
+		localStorage.removeItem('remember')
+		localStorage.removeItem('name')
+		localStorage.removeItem('email')
+		localStorage.removeItem('mobile')
+	}
+	
 })
+
+if(localStorage.remember == 'true'){
+	console.log('its true')
+	document.querySelector('#name').value = localStorage.name
+	document.querySelector('#email').value = localStorage.email
+	document.querySelector('#mobile').value = localStorage.mobile
+	remember.checked = localStorage.remember
+	console.log(remember.value)
+}
