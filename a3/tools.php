@@ -118,7 +118,8 @@ function bottom(){
 </div>
 </footer>
 </body>
-<script src='script.js?t=<?= filemtime("script.js"); ?>'>
+/* <script src='script.js?t=<?= filemtime("script.js"); ?>'> */
+<script src='script.js'>
 </script>
 </html>
 OUTPUT;
@@ -235,7 +236,7 @@ if($i == 0 || getYear($associativeRecords, $i) !== getYear($associativeRecords, 
       echo '</div>';
     
       echo '<div class="back">';
-        echo '<p>'.$associativeRecords[$i]['DateStart'].'</p>';
+        echo '<p>'.convertDate($associativeRecords, $i).'</p>';
         echo '<p>'.$associativeRecords[$i]['Content'].'</p>';
         echo '<p>---oooOooo---</p>';
       echo '</div>';     
