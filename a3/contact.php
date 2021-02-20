@@ -11,7 +11,7 @@
 	
 			<!-- <form action="https://titan.csit.rmit.edu.au/~e54061/wp/testcontact.php" method="post"> -->
 				
-			<form id="contact" method="post" autocomplete="off">
+			<form id="contact" method="post" autocomplete="off" action="post-validation.php">
 				<fieldset>
 					<label for="name">Name</label>
 					<input type="text" id="name" name="name" placeholder="Ian Baker" pattern="[A-Za-z .\-']+" title="May consist of letters and limited punctuation (-, ., and ')" required>
