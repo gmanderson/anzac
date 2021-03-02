@@ -1,28 +1,30 @@
 <?php
   error_reporting(E_ERROR | E_WARNING | E_PARSE);
   require_once("tools.php");
+  require_once("post-validation.php");
   
   top_module("ANZAC Douglas Raymond Baker - Letters Home - Contact");
- ?>
+  
 
+$content = <<<"OUTPUT"
 		<main>
 			<h2>Contact</h2>
 			<p>Do you have comments? Or wish to share stories? Please contact us using the form below.</p>
 	
 			<!-- <form action="https://titan.csit.rmit.edu.au/~e54061/wp/testcontact.php" method="post"> -->
 				
-			<form id="contact" method="post" autocomplete="off" action="post-validation.php">
+			<form id="contact" method="post" autocomplete="off" action="contact.php">
 				<fieldset>
 					<label for="name">Name</label>
-					<input type="text" id="name" name="name" placeholder="Ian Baker" pattern="[A-Za-z .\-']+" title="May consist of letters and limited punctuation (-, ., and ')" required>
+					<input type="text" id="name" name="name" placeholder="Ian Baker" pattern="[A-Za-z .\-']+" title="May consist of letters and limited punctuation (-, ., and ')" required value=$firstName>
 					<br>
 		
 					<label for="email">Email</label>
-					<input type="email" id="email" name="email" placeholder="ian@baker.com.au" required><!-- use filter_var?? in php?-->
+					<input type="email" id="email" name="email" placeholder="ian@baker.com.au" required value=$cleanEmail>$emailError
 					<br>
 		
 					<label for="mobile">Mobile</label>
-					<input type="text" id="mobile" name="mobile" placeholder="0412345678" pattern="(\(04\)|04|\+614)( ?\d){8}" title="Must be an Australian mobile number">
+					<input type="text" id="mobile" name="mobile" placeholder="0412345678" pattern="(\(04\)|04|\+614)( ?\d){8}" title="Must be an Australian mobile number" value=$mobile>
 					<br>
 					
 					<label for="subject">Subject</label>
@@ -41,24 +43,21 @@
 				</fieldset>
 				<input type="submit" name="send" value="Send">
 			</form>
-			
-			<?php
+OUTPUT;
+echo $content;
+
+	
 			debug();
-			?>
+	
 			
-			<?php
-			// move this to the post validation script
-			$cells = [$_POST["name"], $_POST["email"], $_POST["mobile"], $_POST["subject"], $_POST["message"]];
-			if (($fp = fopen("./mail.txt", a)) && flock($fp, LOCK_EX) !== false){
-				fputcsv($fp, $cells, "\t");
-				flock($fp, LOCK_UN);
-				fclose($fp);
-			}
-			?>
+
+			// PROCESS IN VALIDATION SCRIPT
+				// writeCSV();
+
 		
-		</main>
+		echo "</main>";
 		
-<?php
+
 
 bottom();
 
