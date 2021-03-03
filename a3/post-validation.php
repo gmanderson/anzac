@@ -2,42 +2,52 @@
 
   $firstname = '';
   $firstnameError = '';
-  $mobile = '';
+  $email = '';
   $emailError = '';
+  $mobile = '';
+  $mobileError = '';
+
   $errorFound = false;
   
-  $email = $_POST["email"];
-  $name = $_POST["name"];
-  $subject = $_POST["subject"];
-  $message = $_POST["message"];
   
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Put your POST data processing and validation code here....name doesn't work properly
-    if(!(preg_match("/[A-Za-z\.\-']+/", $_POST["name"]))){
-      $firstName = $name;
+    // Put your POST data processing and validation code here
+    if(preg_match("/[^A-Za-z .\-']+/", $_POST["name"])){
       $errorFound = true;
+      $firstnameError = "<br>Only letters and limited punctuation (-, ., and ') allowed";
+    }
+    
+  if(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
+    $emailError = '<br>did you mean to type this?';
+    $errorFound = true;
+  }
+  
+  // Email is always sanitised 
+  $cleanEmail = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+  
+  // If field is not blank
+  if($_POST["mobile"] != ""){
+    if(!preg_match("/^(\(04\)|04|\+614)( ?\d){8}/", $_POST["mobile"])){
+      $errorFound = true;
+      $mobileError = "<br>Must be an Australian mobile number";
+    }
+  }
+
+  
+  $cleanSubject = preg_replace('/[^\n[:print:]]/','',$_POST["subject"]);
+  $cleanMessage = preg_replace('/[^\n[:print:]]/','',$_POST["message"]);
+  
+  // If any piece of POST data fails then all are written back to form fields
+  if($errorFound == true){
+      $firstName = $_POST["name"];
+      $email = $cleanEmail;
+      $mobile = $_POST["mobile"];
+      $subject = $cleanSubject;
+      $message = $cleanMessage;
     }
   
-  if(!preg_match("/^(\(04\)|04|\+614)( ?\d){8}/", $_POST["mobile"])){
-    $mobile = $_POST["mobile"];
-    $errorFound = true;
-  }
-
-  if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-    $cleanEmail = filter_var($email, FILTER_SANITIZE_EMAIL);
-    $emailError = 'did you mean to type this?';
-    $errorFound = true;
-
-  }
-
-  $stuff = htmlentities($_POST["message"]);
-  echo $stuff;
-  $_POST["message"] = $stuff;
-  
-  $cleanSubject = preg_replace('/[^\n[:print:]]/','',$subject);
-  $cleanMessage = preg_replace('/[^\n[:print:]]/','',$message);
-  
   if($errorFound == false){
+    $successMessage = '<p>Your message has been sent</p>';
     writeCSV();
   }
   
