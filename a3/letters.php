@@ -29,8 +29,8 @@
 			<h2>Letters & Postcards</h2>
 			
 			<?php
-			$associativeRecords = loadDocuments("./letters-home.txt");
-			// $associativeRecords = loadDocuments("http://titan.csit.rmit.edu.au/~e54061/wp/letters-home.txt");
+			// $associativeRecords = loadDocuments("./letters-home.txt");
+			$associativeRecords = loadDocuments("http://titan.csit.rmit.edu.au/~e54061/wp/letters-home.txt");
 			?>
 			
 			<?php
