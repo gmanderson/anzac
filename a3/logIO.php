@@ -20,7 +20,8 @@ define("PASSWORD", "p4ssw0rd");
 	}
 	
 	// Transfer user back to the referring page
-	header("Location: edit-letters.php");
+	// header("Location: edit-letters.php");
+	header("Location: ".$_SERVER["HTTP_REFERER"]);
   } else {
   	// User got here by not clicking a logIO button, forward them "silently" to the home page.
 	header("Location: index.php"); // Change to index
