@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
   $firstname = '';
   $firstnameError = '';
   $email = '';
@@ -33,9 +35,18 @@
     }
   }
 
+//NEED TO ADD THIS TO STOP HTML INJECTION
+  // $stuff = htmlentities($_POST["message"]);
+  // echo $stuff;
+  // $_POST["message"] = $stuff;
   
+  // Remove non-printable characters
   $cleanSubject = preg_replace('/[^\n[:print:]]/','',$_POST["subject"]);
   $cleanMessage = preg_replace('/[^\n[:print:]]/','',$_POST["message"]);
+  
+  // Convert html to text
+  $cleanSubject = htmlentities($cleanSubject);
+  $cleanMessage = htmlentities($cleanMessage);
   
   // If any piece of POST data fails then all are written back to form fields
   if($errorFound == true){
