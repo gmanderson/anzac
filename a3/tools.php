@@ -47,7 +47,8 @@ echo $title;
 
 if (isset($_SESSION["user"])) {
   $logged = 'Logged in as '.$_SESSION["user"]["fname"].'
-  <button name=logIO>Log Out</button>';
+  <button name=logIO>Log Out</button>
+  <a href="./edit-letters.php">Edit Letters</a>';
   } else {
     $logged = '
     <label>Sign in as</label>
@@ -56,6 +57,15 @@ if (isset($_SESSION["user"])) {
     <input type=password name=password>
     <button name=logIO>Log In</button>';
 }
+
+$loginBar = <<< "OUTPUT"
+<div id="login">
+<form action="logIO.php" method="post" autocomplete="off">
+$logged
+</form>
+</div>
+OUTPUT;
+echo $loginBar;
 
 $nav = <<<"OUTPUT"
 <nav>
@@ -75,12 +85,8 @@ $nav = <<<"OUTPUT"
 
 </ul>
 
-<div>
-<form action="logIO.php" method="post" autocomplete="off">
-$logged
-</form>
-</div>
 </nav>
+
 OUTPUT;
 echo $nav;
 
@@ -223,14 +229,19 @@ if($i == 0 || getYear($associativeRecords, $i) !== getYear($associativeRecords, 
     //   echo '<ol>';
     // }
     
+    /* Original images below sourced for educational purposes: https://www.iwm.org.uk/history/15-photos-of-the-anzacs-at-gallipoli. */
+    $postcardImages = ["../../media/anzac-cove.jpg", "../../media/road-making-party.jpg", "../../media/dug-outs-at-gaba-tepe.jpg"];
+    
     echo '<li>'.$associativeRecords[$i]['Type'].' '.convertDate($associativeRecords, $i);
     
     echo '<div class="'.$documentType.' correspondence">';
     
       echo '<div class="front">';
       if ($associativeRecords[$i]['Type'] === 'Postcard'){
-        echo '<img src="../../media/anzac-cove.jpg" alt="">';
+        /* Original image below sourced for educational purposes: https://www.iwm.org.uk/history/15-photos-of-the-anzacs-at-gallipoli. */
+        echo '<img src='.$postcardImages[(i%3)].' alt="">';
       }else{
+        /* Original image below sourced for educational purposes: https://www.freeimages.com/photo/old-envelope-1-1157389 */
         echo '<img src="../../media/old-envelope-1-1157389.jpg" alt="">';
       }
       echo '</div>';
@@ -253,7 +264,6 @@ if($i == 0 || getYear($associativeRecords, $i) !== getYear($associativeRecords, 
   
   }
 }
-
 
 function debug(){
   echo '<details>';
