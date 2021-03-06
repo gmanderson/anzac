@@ -72,7 +72,7 @@ header img{
 nav{
 	display: block;
 	position: sticky;
-	top: 0px;
+	top: 49px;
 	background: #343434;
 	min-width: 690px;
 	border-left: 1px solid #343434;
@@ -81,7 +81,7 @@ nav{
 
 /* Selects subnav on Letters page */
 nav+nav{
-	top: 40px;
+	top: 89px;
 	background: #445454;
 }
 
@@ -91,13 +91,27 @@ nav li{
 	margin-right: auto;
 }
 
-nav div{
-	position: absolute;
-	top: -4px;
-	right: 0;
-	color: white;
-	text-align: center;
-	margin-right: 10px;
+#login{
+	background: #e8e8e8;
+	display: flex;
+	/* align-items: center; */
+	position: sticky;
+	top: 0px;
+	/* text-align: center;
+	padding-bottom: 9px; */
+	padding-left: 37px;
+	z-index: 1;
+	height: 49px;
+	/* line-height: 49px; */
+}
+
+#login button{
+	/* border: none; */
+	width: 60px;
+	height: 30px;
+	/* background: #702929; */
+	margin-left: 35px;
+	display: inline-block;	
 }
 
 nav a{
@@ -267,9 +281,9 @@ form input{
 	padding: 4px;
 }
 
+/* LOGIN */
 div input{
 	width: 100px;
-	background: red;
 }
 
 form textarea{
@@ -330,8 +344,21 @@ footer a{
 		padding: 10px 10px 10px 10px;
 	}
 	
+	#login{
+		padding-top:12px;
+		padding-left: 7px;
+	}
+	#login input{
+
+		width: 80px;
+	}
+	
+	#login label{
+		width: 80px;
+	}
+	
 	nav+nav{
-		top: 38px;
+		top: 85px;
 	}
 	
 	dl{
