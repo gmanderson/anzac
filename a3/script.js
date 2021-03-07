@@ -1,3 +1,4 @@
+// POSTCARD/LETTER FLIP
 let correspondence = document.querySelectorAll(".correspondence");
 let front = document.querySelectorAll(".front");
 let back = document.querySelectorAll(".back");
@@ -24,7 +25,7 @@ for(let i=0; i<correspondence.length; i++){
 }
 
 
-// CONTACT PAGE
+// CONTACT PAGE REMEMBER ME FUNCTION
 let remember = document.querySelector("#remember-me");
 
 remember.addEventListener('click', function(){
