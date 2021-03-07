@@ -14,13 +14,19 @@
     
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Put your POST data processing and validation code here
-    if(preg_match("/[^A-Za-z .\-']+/", $_POST["name"])){
+    if(empty($_POST["name"])){
+      $errorFound = true;
+      $firstnameError = "<br>Field may not be blank";
+    }elseif(preg_match("/[^A-Za-z .\-']+/", $_POST["name"])){
       $errorFound = true;
       $firstnameError = "<br>Only letters and limited punctuation (-, ., and ') allowed";
     }
     
-    if(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
-      $emailError = '<br>did you mean to type this?';
+    if(empty($_POST["email"])){
+      $errorFound = true;
+      $emailError = "<br>Field may not be blank";
+    }elseif(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
+      $emailError = '<br>Did you mean to type this?';
       $errorFound = true;
     }
     
@@ -33,6 +39,16 @@
         $errorFound = true;
         $mobileError = "<br>Must be an Australian mobile number";
       }
+    }
+    
+    if(empty($_POST["subject"])){
+      $subjectError = "<br>Field may not be blank";
+      $errorFound = true;
+    }
+    
+    if(empty($_POST["message"])){
+      $messageError = "<br>Field may not be blank";
+      $errorFound = true;
     }
   
     // Remove non-printable characters
@@ -56,10 +72,13 @@
     if($errorFound == false){
       $successMessage = '<p>Your message has been sent</p>';
       writeCSV();
+    }else{
+      $successMessage = '<p>Please correct the errors</p>';
     }
+
     
   }
-
+  
   // WRITES FORM DATA TO TEXT FILE
   function writeCSV(){
     $cells = [$_POST["name"], $_POST["email"], $_POST["mobile"], $_POST["subject"], $_POST["message"]];
