@@ -69,7 +69,7 @@ header img{
 	max-width: 200px;
 }
 
-nav{
+nav+nav{
 	display: block;
 	position: sticky;
 	top: 49px;
@@ -80,7 +80,7 @@ nav{
 }
 
 /* Selects subnav on Letters page */
-nav+nav{
+nav+nav+nav{
 	top: 89px;
 	background: #445454;
 }
@@ -92,7 +92,7 @@ nav li{
 }
 
 #login{
-	background: #e8e8e8;
+	background: #343434;
 	display: flex;
 	/* align-items: center; */
 	position: sticky;
@@ -103,6 +103,7 @@ nav li{
 	z-index: 1;
 	height: 49px;
 	/* line-height: 49px; */
+	color: #ffffff;
 }
 
 #login button{
@@ -112,6 +113,14 @@ nav li{
 	/* background: #702929; */
 	margin-left: 35px;
 	display: inline-block;	
+}
+
+#login label{
+	width: 90px;
+}
+
+#login input{
+	width: 100px;
 }
 
 nav a{
@@ -127,6 +136,7 @@ nav a:link, nav a:visited{
 nav a:hover, nav a:active{
 	color: #000000;
 	background-color: #ffffff;
+	height: 100%;
 }
 
 ul{
@@ -138,8 +148,10 @@ ul{
 .current-page{
 	background-color: #bebebe;
 	color: #000000 !important;
-	border-top: 1px solid #343434;
-	border-bottom: 1px solid #343434;
+	/* border-top: 1px solid #343434;
+	border-bottom: 1px solid #343434; */
+	border: 1px solid #343434;
+	height: 100%;
 }
 
 main{
@@ -268,6 +280,10 @@ form label{
 	padding: 5px;
 }
 
+#disable-validation + label{
+	width: 250px;
+}
+
 input[type='checkbox']{
 	width: auto;
 	margin-left: 132px;
@@ -281,11 +297,6 @@ form input{
 	padding: 4px;
 }
 
-/* LOGIN */
-div input{
-	width: 100px;
-}
-
 form textarea{
 	width: 227px;
 	height: 200px;
@@ -294,6 +305,7 @@ form textarea{
 	margin-top: 5px;
 	font-size: 105%;
 	padding: 4px;
+	font-family: sans-serif;
 }
 
 input[type='submit']{
@@ -326,65 +338,6 @@ footer div{
 
 footer a{
 	color: #ffffff;
-}
-
-/* For mobile size (roughly) */
-@media screen and (max-width: 600px) {
-	/* Parallax effect doesn't work on iOS */
-	.background-image{
-		background-attachment: local;
-		width: 100%;
-		height: 400px;
-	}
-	
-	nav{
-		min-width: 375px;
-	}
-	nav a{
-		padding: 10px 10px 10px 10px;
-	}
-	
-	#login{
-		padding-top:12px;
-		padding-left: 7px;
-	}
-	#login input{
-
-		width: 80px;
-	}
-	
-	#login label{
-		width: 80px;
-	}
-	
-	nav+nav{
-		top: 85px;
-	}
-	
-	dl{
-		column-count: 1;
-	}
-
-	fieldset{
-		max-width: 250px;
-	}
-	
-	form input{
-		margin-top: 0px;
-	}
-	
-	input[type='checkbox']{
-		margin-left: 0px;
-	}
-	
-	footer div{
-		line-height: 1.4em;
-		font-size: 90%;
-	}
-	
-	*{
-		font-size:95%;
-	}
 }
 
 /* Flipping styles needs to be edited. Needs different z-index*/
@@ -434,11 +387,11 @@ div.post-card div {
 	
 .turn-back{
 	transform: rotateY(360deg);
-background-image: url("../../media/grunge-vintage-old-paper-background.jpg");
-/* <a href='https://www.freepik.com/photos/background'>Background photo created by aopsan - www.freepik.com</a>
-https://www.freepik.com/free-photo/grunge-vintage-old-paper-background_1273370.htm#page=1&query=old%20paper&position=0 */
-overflow: auto;
-	}
+	background-image: url("../../media/grunge-vintage-old-paper-background.jpg");
+	/* <a href='https://www.freepik.com/photos/background'>Background photo created by aopsan - www.freepik.com</a>
+	https://www.freepik.com/free-photo/grunge-vintage-old-paper-background_1273370.htm#page=1&query=old%20paper&position=0 */
+	overflow: auto;
+}
 	
 	
 /* Flipping styles needs to be edited. Needs different z-index*/
@@ -464,8 +417,81 @@ div.letter div {
 	transition: 4s;
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
-background-image: url("../../media/grunge-vintage-old-paper-background.jpg");
-/* <a href='https://www.freepik.com/photos/background'>Background photo created by aopsan - www.freepik.com</a>
-https://www.freepik.com/free-photo/grunge-vintage-old-paper-background_1273370.htm#page=1&query=old%20paper&position=0 */
-overflow: auto;
+	background-image: url("../../media/grunge-vintage-old-paper-background.jpg");
+	/* <a href='https://www.freepik.com/photos/background'>Background photo created by aopsan - www.freepik.com</a>
+	https://www.freepik.com/free-photo/grunge-vintage-old-paper-background_1273370.htm#page=1&query=old%20paper&position=0 */
+	overflow: auto;
+}
+
+/* For mobile size (roughly) */
+@media screen and (max-width: 600px) {
+	/* Parallax effect doesn't work on iOS */
+	.background-image{
+		background-attachment: local;
+		width: 100%;
+		height: 400px;
 	}
+	
+	nav{
+		min-width: 375px;
+	}
+	nav a{
+		padding: 10px 10px 10px 10px;
+	}
+	
+	#login{
+		padding-top:12px;
+		padding-left: 7px;
+	}
+	#login input{
+		width: 80px;
+	}
+	
+	#login label{
+		width: 80px;
+	}
+	
+	#login p{
+		margin-top: 0%;
+	}
+	
+	
+	nav+nav+nav{
+		top: 85px;
+	}
+	
+	dl{
+		column-count: 1;
+	}
+
+	fieldset{
+		max-width: 250px;
+	}
+	
+	form input{
+		margin-top: 0px;
+	}
+	
+	input[type='checkbox']{
+		margin-left: 0px;
+	}
+	
+	#disable-validation{
+		display: inline-block;
+	}
+	
+	#disable-validation + label{
+		width: 200px;
+		display: inline-block;
+	}
+	
+	footer div{
+		line-height: 1.4em;
+		font-size: 90%;
+	}
+	
+	*{
+		font-size:95%;
+	}
+	
+}
