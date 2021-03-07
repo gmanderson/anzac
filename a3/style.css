@@ -94,23 +94,17 @@ nav li{
 #login{
 	background: #343434;
 	display: flex;
-	/* align-items: center; */
 	position: sticky;
 	top: 0px;
-	/* text-align: center;
-	padding-bottom: 9px; */
 	padding-left: 37px;
 	z-index: 1;
 	height: 49px;
-	/* line-height: 49px; */
 	color: #ffffff;
 }
 
 #login button{
-	/* border: none; */
 	width: 60px;
 	height: 30px;
-	/* background: #702929; */
 	margin-left: 35px;
 	display: inline-block;	
 }
@@ -148,8 +142,6 @@ ul{
 .current-page{
 	background-color: #bebebe;
 	color: #000000 !important;
-	/* border-top: 1px solid #343434;
-	border-bottom: 1px solid #343434; */
 	border: 1px solid #343434;
 	height: 100%;
 }
@@ -215,7 +207,7 @@ p{
 }
 
 p:last-child{
-	margin-bottom: 70px; /* what to do about this?*/
+	margin-bottom: 70px;
 }
 
 dl{
@@ -276,7 +268,6 @@ fieldset{
 form label{
 	display: inline-block;
 	width: 130px;
-	/* align-content: first; */
 	padding: 5px;
 }
 
@@ -340,10 +331,8 @@ footer a{
 	color: #ffffff;
 }
 
-/* Flipping styles needs to be edited. Needs different z-index*/
 div.post-card{
 	height: 500px;
-	/* width: 500px; */
 	box-sizing: border-box;
 	overflow: auto;
 	padding: 0px;
@@ -393,8 +382,6 @@ div.post-card div {
 	overflow: auto;
 }
 	
-	
-/* Flipping styles needs to be edited. Needs different z-index*/
 div.letter{
 	height: 500px;
 	box-sizing: border-box;
