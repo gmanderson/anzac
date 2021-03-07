@@ -27,11 +27,11 @@ $content = <<<"OUTPUT"
 				<br>
 				
 				<label for="subject">Subject</label>
-				<input type="text" id="subject" name="subject" placeholder="Subject" required value=$subject>
+				<input type="text" id="subject" name="subject" placeholder="Subject" required value=$subject>$subjectError
 				<br>
 	
 				<label for="message">Message</label>
-				<textarea name="message" id="message" placeholder="Type your message here" required>$message</textarea>
+				<textarea name="message" id="message" placeholder="Type your message here" required>$message</textarea>$messageError
 				<br>
 	
 				<input type="checkbox" id="remember-me" name="remember-me">
