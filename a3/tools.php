@@ -96,7 +96,7 @@ echo $nav;
   
 }
 
-
+// WRITES THE FOOTER AND REMAININ HTML TO EACH PAGE
 function bottom(){
   
   $lastModified = date ("Y F d  H:i", filemtime($_SERVER["SCRIPT_FILENAME"]));
@@ -130,10 +130,11 @@ echo $html;
 
 }
 
+// LOADS THE LETTERS DATA AND ASSEMBLES AS AN ARRAY
 function loadDocuments($filename){
   
   if( ($fp = fopen($filename, "r")) !== false ){
-    // if(flock($fp, LOCK_SH) !== false){  NOT WORKING AS PER DISCUSSION WITH TREVOR
+    // if(flock($fp, LOCK_SH) !== false){  SHARE LOCK NOT WORKING AS PER DISCUSSION WITH TREVOR
       $headings = fgetcsv($fp, 0, "\t");
       while( ($aLineOfCells = fgetcsv($fp, 0, "\t")) !== false ){
         $records[] = $aLineOfCells;
