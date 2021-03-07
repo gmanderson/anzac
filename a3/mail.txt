@@ -1,18 +1,2 @@
 Name	Email	Mobile	Subject	Message
-T	r@s.com		i	873n
-T	r@s.com		i	873n
-New	new@test.com		jjhk	Hjklgdylb
-Odl	hjk@me.com		Hjky	Jklduicl
-g	g@g.com		y	y
-g	g@g.com		Jj	J
-				
-h	h@h.com		8	u
-u	u@u.com		9	i
-				
-				
-g	g@g.com		Jj	J
-				
-				
-				
-				
-				
+Gerard	gerard@gerard.com	0412345678	Hello	"Hello. This is a test message"
