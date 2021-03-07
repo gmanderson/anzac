@@ -5,41 +5,40 @@
   top_module("ANZAC Douglas Raymond Baker - Letters Home - Letters &amp; Post Cards");
 ?>
 			
-		<nav id="sub-nav">
-			<ul>
-				<li>
-					<a href="#1914">1914</a>
-				</li>
-				<li>
-					<a href="#1915">1915</a>
-				</li>
-				<li>
-					<a href="#1916">1916</a>
-				</li>
-				<li>
-					<a href="#1917">1917</a>
-				</li>
-				<li>
-					<a href="#1918">1918</a>
-				</li>
-			</ul>
-		</nav>
-		
-		<main>
-			<h2>Letters & Postcards</h2>
-			
-			<?php
-			// $associativeRecords = loadDocuments("./letters-home.txt");
-			$associativeRecords = loadDocuments("http://titan.csit.rmit.edu.au/~e54061/wp/letters-home.txt");
-			?>
-			
-			<?php
-			
-			displayCorrespondence($associativeRecords);
-			?>
+<nav id="sub-nav">
+	<ul>
+		<li>
+			<a href="#1914">1914</a>
+		</li>
+		<li>
+			<a href="#1915">1915</a>
+		</li>
+		<li>
+			<a href="#1916">1916</a>
+		</li>
+		<li>
+			<a href="#1917">1917</a>
+		</li>
+		<li>
+			<a href="#1918">1918</a>
+		</li>
+	</ul>
+</nav>
 
-		
-		</main>
+<main>
+	<h2>Letters & Postcards</h2>
+	
+	<?php
+	// LOCAL COPY
+	// $associativeRecords = loadDocuments("./letters-home.txt");
+	// ONLINE VERSION
+	$associativeRecords = loadDocuments("http://titan.csit.rmit.edu.au/~e54061/wp/letters-home.txt");
+	
+	displayCorrespondence($associativeRecords);
+	
+	?>
+
+</main>
 		
 <?php
 
