@@ -123,7 +123,7 @@ function bottom(){
       </div>
     </footer>
   </body>
-  <script src='script.js?t=<?= filemtime("script.js"); ?>'>
+  <script src='script.js?t=<?= filemtime("script.js"); ?>'></script>
 </html>
 OUTPUT;
 echo $html;
