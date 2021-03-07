@@ -177,6 +177,16 @@ function getMonth($associativeRecords, $i){
   return date_format($dateToConvert, "F");
 }
 
+// CREATES ARRAY OF IMAGES FOR POSTCARDS AND RETURNS ONE IN LOOP
+function selectPostcardImage($i){
+  /* Original images below sourced for educational purposes: https://www.iwm.org.uk/history/15-photos-of-the-anzacs-at-gallipoli. */
+  $postcardImages[0] = "../../media/anzac-cove.jpg";
+  $postcardImages[1] = "../../media/road-making-party.jpg"; 
+  $postcardImages[2] = "../../media/dug-outs-at-gaba-tepe.jpg";
+  
+  return $postcardImages[($i%count($postcardImages))];
+}
+
 // DISPLAYS ARRAY ON AS POSTCARDS AND LETTERS
 function displayCorrespondence($associativeRecords){
   $arrLength = count($associativeRecords);
@@ -207,12 +217,6 @@ function displayCorrespondence($associativeRecords){
     if($i == 0 || getYear($associativeRecords, $i) !== getYear($associativeRecords, ($i-1))){
       echo '<ol>';
     }
-        
-    // Array of images for postcards
-    /* Original images below sourced for educational purposes: https://www.iwm.org.uk/history/15-photos-of-the-anzacs-at-gallipoli. */
-    $postcardImages[0] = "../../media/anzac-cove.jpg";
-    $postcardImages[1] = "../../media/road-making-party.jpg"; 
-    $postcardImages[2] = "../../media/dug-outs-at-gaba-tepe.jpg";
       
     echo '<li>'.$associativeRecords[$i]['Type'].' '.convertDate($associativeRecords, $i);
       
@@ -221,7 +225,7 @@ function displayCorrespondence($associativeRecords){
     echo '<div class="front">';
     if ($associativeRecords[$i]['Type'] === 'Postcard'){
       /* Original image below sourced for educational purposes: https://www.iwm.org.uk/history/15-photos-of-the-anzacs-at-gallipoli. */
-      echo '<img src='.$postcardImages[($i%3)].' alt="">';
+      echo '<img src='.selectPostcardImage($i).' alt="">';
     }else{
       /* Original image below sourced for educational purposes: https://www.freeimages.com/photo/old-envelope-1-1157389 */
       echo '<img src="../../media/old-envelope-1-1157389.jpg" alt="">';
